@@ -37,6 +37,11 @@
       "label": "階段",
       "exposure": 1.0
     },
+    "stairs_down": {
+      "texture": "bg_stairs_down",
+      "label": "階段（下り）",
+      "exposure": 1.0
+    },
     "hall2": {
       "texture": "bg_hall2",
       "label": "二階の廊下",

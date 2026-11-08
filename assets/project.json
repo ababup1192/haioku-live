@@ -49,6 +49,11 @@
       "hasAlpha": false
     },
     {
+      "name": "bg_stairs_down",
+      "path": "assets/bg/stairs_down.jpg",
+      "hasAlpha": false
+    },
+    {
       "name": "bg_hall2",
       "path": "assets/bg/hall2.jpg",
       "hasAlpha": false

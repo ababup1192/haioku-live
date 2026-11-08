@@ -1130,7 +1130,7 @@
           "line": 197,
           "name": "bg",
           "args": [
-            "stairs",
+            "stairs_down",
             "run",
             "0.4"
           ]

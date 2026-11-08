@@ -194,7 +194,7 @@ title: Escape
 <<bg hall2 run 0.4>>
 <<battery 17>>
 <<wait 0.6>>
-<<bg stairs run 0.4>>
+<<bg stairs_down run 0.4>>
 <<wait 0.9>>
 一階に下り、廊下を玄関へ向かう。
 あったはずだ。ここをまっすぐ行けば、玄関だったはずだ。

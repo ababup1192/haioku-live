@@ -23,7 +23,8 @@
 | `assets/bg/hall1.jpg` | 一階の廊下 |
 | `assets/bg/living.jpg` | 居間 |
 | `assets/bg/kitchen.jpg` | 台所 |
-| `assets/bg/stairs.jpg` | 階段 |
+| `assets/bg/stairs.jpg` | 階段（見上げ） |
+| `assets/bg/stairs_down.jpg` | 階段（見下ろし。逃げて駆け下りる所） |
 | `assets/bg/hall2.jpg` | 二階の廊下 |
 | `assets/bg/room1.jpg` | 二階の一つ目の部屋 |
 | `assets/bg/room_back.jpg` | 二階の奥の部屋 |
