@@ -2,7 +2,6 @@
   "version": 1,
   "note": "シナリオの外で画面に出す言葉（タイトル・クイックメニュー・設定・セーブとロード・バックログ・確認のウィンドウ・知らせ）と、主人公の名前（labels の heroName。台本の ×××× に入る）。文章はシナリオ assets/talk/haioku.yarn（直したら bin/fge yarn build assets/talk）。labels の鍵は src/StoryDoc.flix の Label。titlePlace は novel.backdrops.json の places の鍵、titleAmbience はタイトル画面で鳴り続ける音（project.json の sounds の名前）。",
   "title": "廃屋配信",
-  "subtitle": "今夜は、例の廃屋から生配信でお送りします。",
   "hint": "タップか Enter で選ぶ",
   "titlePlace": "gate",
   "titleAmbience": [

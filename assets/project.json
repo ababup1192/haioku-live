@@ -374,13 +374,81 @@
       "longPress": "back",
       "swipeLeft": "rollback"
     },
-    "embed": ["assets/talk/dialogue.json"],
-    "omit": ["assets/talk/*.yarn", "assets/*.schema.json"],
+    "compress": {
+      "lossyImages": [
+        {
+          "glob": "assets/bg/*.jpg",
+          "quality": 85
+        }
+      ]
+    },
+    "embed": [
+      "assets/talk/dialogue.json"
+    ],
+    "omit": [
+      "assets/talk/*.yarn",
+      "assets/*.schema.json"
+    ],
     "orientation": "portrait",
     "portraitDesign": {
       "width": 540,
       "minHeight": 960
-    }
+    },
+    "deferred": [
+      "assets/walk/gate.glb",
+      "assets/walk/gate.jpg",
+      "assets/walk/entrance_out.glb",
+      "assets/walk/entrance_out.jpg",
+      "assets/walk/genkan.glb",
+      "assets/walk/genkan.jpg",
+      "assets/walk/hall1.glb",
+      "assets/walk/hall1.jpg",
+      "assets/walk/living.glb",
+      "assets/walk/living.jpg",
+      "assets/walk/kitchen.glb",
+      "assets/walk/kitchen.jpg",
+      "assets/walk/stairs.glb",
+      "assets/walk/stairs.jpg",
+      "assets/walk/hall2.glb",
+      "assets/walk/hall2.jpg",
+      "assets/walk/room1.glb",
+      "assets/walk/room1.jpg",
+      "assets/walk/stairs_down.glb",
+      "assets/walk/stairs_down.jpg",
+      "assets/walk/hall_endless.glb",
+      "assets/walk/hall_endless.jpg",
+      "assets/walk/room_back.glb",
+      "assets/walk/room_back.jpg",
+      "assets/walk/oshiire.glb",
+      "assets/walk/oshiire.jpg",
+      "assets/sfx/amb_house.wav",
+      "assets/sfx/se_breath.wav",
+      "assets/sfx/se_comment.wav",
+      "assets/sfx/se_door_close.wav",
+      "assets/sfx/se_door_heavy.wav",
+      "assets/sfx/se_door_slam.wav",
+      "assets/sfx/se_door_slow.wav",
+      "assets/sfx/se_fusuma.wav",
+      "assets/sfx/se_futon.wav",
+      "assets/sfx/se_groan.wav",
+      "assets/sfx/se_groan_far.wav",
+      "assets/sfx/se_heartbeat.wav",
+      "assets/sfx/se_knob.wav",
+      "assets/sfx/se_lock.wav",
+      "assets/sfx/se_lock_rattle.wav",
+      "assets/sfx/se_noise.wav",
+      "assets/sfx/se_run.wav",
+      "assets/sfx/se_scream.wav",
+      "assets/sfx/se_sliding.wav",
+      "assets/sfx/se_splash.wav",
+      "assets/sfx/se_stairs_down.wav",
+      "assets/sfx/se_stairs_slow.wav",
+      "assets/sfx/se_stairs_up.wav",
+      "assets/sfx/se_step_heavy.wav",
+      "assets/sfx/se_timer.wav",
+      "assets/sfx/se_vibrate.wav",
+      "assets/sfx/bgm_*.wav"
+    ]
   },
   "// sounds": "音の名前 → ファイルの対応はここ 1 か所（名前 = ファイル名の茎）。拡張子を替える時は make sfx-ext EXT=ogg（Makefile）。鳴り続ける音（amb_・bgm_・心音と呼吸）は looping。"
 }

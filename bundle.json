@@ -1,5 +1,5 @@
 {
- "id": "haioku",
+ "id": "haioku_bg",
  "title": "廃屋配信",
  "files": [
   "assets/OFL-MPLUS1p.txt",
@@ -303,9 +303,23 @@
  },
  "orientation": "portrait",
  "transcoded": {
+  "assets/bg/blood_color.jpg": "assets/bg/blood_color.webp",
   "assets/bg/blood_key.png": "assets/bg/blood_key.webp",
+  "assets/bg/entrance_out.jpg": "assets/bg/entrance_out.webp",
+  "assets/bg/gate.jpg": "assets/bg/gate.webp",
+  "assets/bg/genkan.jpg": "assets/bg/genkan.webp",
+  "assets/bg/hall1.jpg": "assets/bg/hall1.webp",
+  "assets/bg/hall2.jpg": "assets/bg/hall2.webp",
+  "assets/bg/hall_endless.jpg": "assets/bg/hall_endless.webp",
   "assets/bg/kaii_gap.png": "assets/bg/kaii_gap.webp",
   "assets/bg/kaii_window.png": "assets/bg/kaii_window.webp",
+  "assets/bg/kitchen.jpg": "assets/bg/kitchen.webp",
+  "assets/bg/living.jpg": "assets/bg/living.webp",
+  "assets/bg/oshiire.jpg": "assets/bg/oshiire.webp",
+  "assets/bg/room1.jpg": "assets/bg/room1.webp",
+  "assets/bg/room_back.jpg": "assets/bg/room_back.webp",
+  "assets/bg/stairs.jpg": "assets/bg/stairs.webp",
+  "assets/bg/stairs_down.jpg": "assets/bg/stairs_down.webp",
   "assets/sfx/amb_house.wav": "assets/sfx/amb_house.webm",
   "assets/sfx/amb_wind.wav": "assets/sfx/amb_wind.webm",
   "assets/sfx/bgm_suspense.wav": "assets/sfx/bgm_suspense.webm",
@@ -341,8 +355,303 @@
   "assets/sfx/ui_open.wav": "assets/sfx/ui_open.webm",
   "assets/sfx/ui_page.wav": "assets/sfx/ui_page.webm",
   "assets/sfx/ui_save.wav": "assets/sfx/ui_save.webm",
-  "font-atlas/default.fontatlas": "font-atlas/default.fontatlas.gz",
-  "font-atlas/gothic.fontatlas": "font-atlas/gothic.fontatlas.gz",
-  "font-atlas/gothic_bold.fontatlas": "font-atlas/gothic_bold.fontatlas.gz"
- }
+  "font-atlas/default.fontatlas": "font-atlas/default.fontatlas-webp",
+  "font-atlas/gothic.fontatlas": "font-atlas/gothic.fontatlas-webp",
+  "font-atlas/gothic_bold.fontatlas": "font-atlas/gothic_bold.fontatlas-webp"
+ },
+ "deferred": [
+  {
+   "path": "assets/walk/gate.glb",
+   "bytes": 407712
+  },
+  {
+   "path": "assets/walk/gate.jpg",
+   "bytes": 121892
+  },
+  {
+   "path": "assets/walk/entrance_out.glb",
+   "bytes": 224828
+  },
+  {
+   "path": "assets/walk/entrance_out.jpg",
+   "bytes": 101954
+  },
+  {
+   "path": "assets/walk/genkan.glb",
+   "bytes": 258540
+  },
+  {
+   "path": "assets/walk/genkan.jpg",
+   "bytes": 106102
+  },
+  {
+   "path": "assets/walk/hall1.glb",
+   "bytes": 168776
+  },
+  {
+   "path": "assets/walk/hall1.jpg",
+   "bytes": 82870
+  },
+  {
+   "path": "assets/walk/living.glb",
+   "bytes": 317000
+  },
+  {
+   "path": "assets/walk/living.jpg",
+   "bytes": 76727
+  },
+  {
+   "path": "assets/walk/kitchen.glb",
+   "bytes": 200664
+  },
+  {
+   "path": "assets/walk/kitchen.jpg",
+   "bytes": 105348
+  },
+  {
+   "path": "assets/walk/stairs.glb",
+   "bytes": 255832
+  },
+  {
+   "path": "assets/walk/stairs.jpg",
+   "bytes": 93679
+  },
+  {
+   "path": "assets/walk/hall2.glb",
+   "bytes": 202452
+  },
+  {
+   "path": "assets/walk/hall2.jpg",
+   "bytes": 83432
+  },
+  {
+   "path": "assets/walk/room1.glb",
+   "bytes": 250760
+  },
+  {
+   "path": "assets/walk/room1.jpg",
+   "bytes": 55105
+  },
+  {
+   "path": "assets/walk/stairs_down.glb",
+   "bytes": 237700
+  },
+  {
+   "path": "assets/walk/stairs_down.jpg",
+   "bytes": 141182
+  },
+  {
+   "path": "assets/walk/hall_endless.glb",
+   "bytes": 233480
+  },
+  {
+   "path": "assets/walk/hall_endless.jpg",
+   "bytes": 87479
+  },
+  {
+   "path": "assets/walk/room_back.glb",
+   "bytes": 297916
+  },
+  {
+   "path": "assets/walk/room_back.jpg",
+   "bytes": 79635
+  },
+  {
+   "path": "assets/walk/oshiire.glb",
+   "bytes": 103528
+  },
+  {
+   "path": "assets/walk/oshiire.jpg",
+   "bytes": 47148
+  },
+  {
+   "path": "assets/sfx/amb_house.wav",
+   "bytes": 104371,
+   "names": [
+    "amb_house"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_breath.wav",
+   "bytes": 40423,
+   "names": [
+    "se_breath"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_comment.wav",
+   "bytes": 2721,
+   "names": [
+    "se_comment"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_door_close.wav",
+   "bytes": 4311,
+   "names": [
+    "se_door_close"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_door_heavy.wav",
+   "bytes": 21644,
+   "names": [
+    "se_door_heavy"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_door_slam.wav",
+   "bytes": 4108,
+   "names": [
+    "se_door_slam"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_door_slow.wav",
+   "bytes": 25406,
+   "names": [
+    "se_door_slow"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_fusuma.wav",
+   "bytes": 30982,
+   "names": [
+    "se_fusuma"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_futon.wav",
+   "bytes": 16068,
+   "names": [
+    "se_futon"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_groan.wav",
+   "bytes": 13955,
+   "names": [
+    "se_groan"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_groan_far.wav",
+   "bytes": 19859,
+   "names": [
+    "se_groan_far"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_heartbeat.wav",
+   "bytes": 11643,
+   "names": [
+    "se_heartbeat"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_knob.wav",
+   "bytes": 6549,
+   "names": [
+    "se_knob"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_lock.wav",
+   "bytes": 4478,
+   "names": [
+    "se_lock"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_lock_rattle.wav",
+   "bytes": 20934,
+   "names": [
+    "se_lock_rattle"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_noise.wav",
+   "bytes": 9011,
+   "names": [
+    "se_noise"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_run.wav",
+   "bytes": 38800,
+   "names": [
+    "se_run"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_scream.wav",
+   "bytes": 15797,
+   "names": [
+    "se_scream"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_sliding.wav",
+   "bytes": 12624,
+   "names": [
+    "se_sliding"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_splash.wav",
+   "bytes": 4087,
+   "names": [
+    "se_splash"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_stairs_down.wav",
+   "bytes": 24021,
+   "names": [
+    "se_stairs_down"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_stairs_slow.wav",
+   "bytes": 20888,
+   "names": [
+    "se_stairs_slow"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_stairs_up.wav",
+   "bytes": 17170,
+   "names": [
+    "se_stairs_up"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_step_heavy.wav",
+   "bytes": 5261,
+   "names": [
+    "se_step_heavy"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_timer.wav",
+   "bytes": 25405,
+   "names": [
+    "se_timer"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_vibrate.wav",
+   "bytes": 6544,
+   "names": [
+    "se_vibrate"
+   ]
+  },
+  {
+   "path": "assets/sfx/bgm_suspense.wav",
+   "bytes": 688520,
+   "names": [
+    "bgm_suspense"
+   ]
+  }
+ ]
 }
