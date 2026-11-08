@@ -457,8 +457,6 @@ function fgeApplyLayout() {
   body.classList.toggle("fge-pad-on", padOn);
   body.classList.toggle("fge-want-landscape", fgeWeb.orientation === "landscape");
   body.classList.toggle("fge-want-portrait", fgeWeb.orientation === "portrait");
-  var start = document.getElementById("fge-start");
-  if (start) start.textContent = coarse ? "タップで始める" : "クリックかキーで始める";
   // WhyNot: orientationchange を待たない — 発火の時にはまだ前の向きの大きさのままの端末がある。大きさの変化（resize）で見る。
   var orientation = innerWidth >= innerHeight ? "landscape" : "portrait";
   if (fgeLastOrientation !== null && orientation !== fgeLastOrientation) fgePadReleaseAll();
@@ -796,12 +794,222 @@ var fgeStats = {
   reset: function () { this.cpuRing.reset(); this.lagRing.reset(); }
 };
 
-// ── 起動の進み具合と終わりの画面 ──
+// ── 起動画面（デスクトップの Splash.flix と同じ配置・色・ゲージ・字）──
+// 押す前も押した後（wasm の LoadProgress）も、ここが #fge-splash の canvas に描く 1 枚の絵を出し続ける。
+// 寸法の式は engine/src/render2d/Splash.flix の drawables と同じ（design の座標で組み、描き先へ黒帯ありで広げる）。
+// WhyNot: 押す前の画面を HTML の字とバーで組まない — 押した後の wasm の起動画面とデスクトップがドットの字で描くので、同じ絵に見えない。
+var fgeSplash = {
+  data: null, bundle: null, design: { w: 0, h: 0 }, phase: "", ratio: null, ready: false, tapped: false,
+  font: null, logo: null, glyphs: null, tints: {}, canvas: null, ctx: null,
+  startedAt: performance.now(), drawn: "", running: false, layout: null
+};
+var fgeSplashColors = { backdrop: "#0b0e12", white: "#ffffff", brand: "rgb(158,204,242)", dim: "rgb(140,148,163)" };
 function fgeProgress(phase, done, total) {
-  var bar = document.getElementById("fge-bar");
-  var text = document.getElementById("fge-phase");
-  if (text) text.textContent = phase + (total > 0 ? " " + done + "/" + total : "");
-  if (bar) bar.style.width = (total > 0 ? Math.round(100 * done / total) : 100) + "%";
+  fgeSplash.phase = phase;
+  fgeSplash.ratio = total > 0 ? Math.max(0, Math.min(1, done / total)) : null;
+}
+function fgeSplashInit(bundle) {
+  var data = bundle.splash || {};
+  fgeSplash.data = data;
+  fgeSplash.bundle = bundle;
+  fgeSplash.design = fgeSplashDesign(bundle, data);
+  var prompt = document.getElementById("fge-prompt");
+  if (prompt) prompt.textContent = data.startPrompt || "Tap to start";
+  if (data.glyphs) {
+    fgeSplash.glyphs = new Map();
+    for (var i = 0; i + 14 <= data.glyphs.length; i += 14) {
+      var hex = function (at, n) { return parseInt(data.glyphs.substr(i + at, n), 16) || 0; };
+      fgeSplash.glyphs.set(hex(0, 4), { x: hex(4, 3), y: hex(7, 3), w: hex(10, 2), adv: hex(12, 2) });
+    }
+  }
+  var load = function (url, key) {
+    if (!url) return;
+    var img = new Image();
+    img.onload = function () { fgeSplash[key] = img; fgeSplash.tints = {}; fgeSplash.drawn = ""; };
+    img.src = url;
+  };
+  load(data.font, "font");
+  load(data.logo, "logo");
+  fgeSplashRun();
+}
+// 押した後に WebLayer が選ぶ design と同じ物（縦の design は web.portraitDesign と今の画面の比から ProjectLoader.portraitDesignOf と同じ式で）。
+function fgeSplashDesign(bundle, data) {
+  var spec = data.portraitDesign;
+  if (spec && fgeWantsPortrait() && innerWidth > 0 && innerHeight > 0) {
+    var h = Math.round(spec.width * innerHeight / innerWidth);
+    return { w: spec.width, h: Math.min(spec.maxHeight, Math.max(spec.minHeight, h)) };
+  }
+  if (bundle.design && bundle.design.w > 0 && bundle.design.h > 0) return { w: bundle.design.w, h: bundle.design.h };
+  return { w: Math.max(1, innerWidth), h: Math.max(1, innerHeight) };
+}
+function fgeSplashRun() {
+  if (fgeSplash.running) return;
+  fgeSplash.running = true;
+  var tick = function () {
+    if (!fgeSplash.running) return;
+    fgeSplashDraw();
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+// 後回しの素材の進み具合（配るバイトの割合）。後回しが無ければ null（2 本目の線を出さない）。
+function fgeSplashDeferredRatio() {
+  var all = 0, got = 0;
+  fgeDeferred.entries.forEach(function (e) {
+    all += e.bytes;
+    if (e.state === "downloaded" || e.state === "loaded" || e.state === "released") got += e.bytes;
+  });
+  return all > 0 ? got / all : null;
+}
+function fgeSplashLayout(dw, dh) {
+  var d = fgeSplash.data || {};
+  var scale = Math.max(1, Math.floor(dh / 200));
+  var logoBase = fgeSplash.logo ? fgeSplash.logo.naturalHeight : 0;
+  var logoH = 0;
+  if (logoBase > 0) {
+    logoH = logoBase / 4;
+    [logoBase / 4, logoBase / 2, logoBase, logoBase * 2].forEach(function (h) { if (h <= dh * 0.3) logoH = Math.max(logoH, h); });
+  }
+  var lineH = ((d.ascent || 9) + (d.descent || 2) + (d.lineGap || 0)) * scale;
+  var gaugeH = Math.max(2, 3 * scale);
+  var gap = 4 * scale;
+  var blockH = logoH + gap + lineH + gap * 2 + gaugeH + gap + lineH;
+  var top = Math.floor((dh - blockH) / 2);
+  var cx = Math.floor(dw / 2);
+  var titleTop = top + logoH + gap;
+  var gaugeTop = titleTop + lineH + gap * 2;
+  var gaugeW = Math.floor(Math.min(dw - 16 * scale, dw * 0.6));
+  return { scale: scale, logoH: logoH, lineH: lineH, gaugeH: gaugeH, cx: cx, logoTop: top, titleTop: titleTop,
+           gaugeTop: gaugeTop, gaugeW: gaugeW, gaugeLeft: Math.floor(cx - gaugeW / 2), phaseTop: gaugeTop + gaugeH + gap };
+}
+// 白い字のアトラスを 1 色に塗った写し（色ごとに 1 枚だけ作る）。
+function fgeSplashTint(color) {
+  var t = fgeSplash.tints[color];
+  if (t) return t;
+  var f = fgeSplash.font;
+  t = document.createElement("canvas");
+  t.width = f.naturalWidth; t.height = f.naturalHeight;
+  var c = t.getContext("2d");
+  c.drawImage(f, 0, 0);
+  c.globalCompositeOperation = "source-in";
+  c.fillStyle = color;
+  c.fillRect(0, 0, t.width, t.height);
+  fgeSplash.tints[color] = t;
+  return t;
+}
+function fgeSplashText(ctx, text, L, top, color) {
+  if (!text || !fgeSplash.font || !fgeSplash.glyphs) return;
+  var cellH = (fgeSplash.data && fgeSplash.data.cellH) || 11;
+  var width = 0;
+  for (var i = 0; i < text.length; i++) { var g0 = fgeSplash.glyphs.get(text.charCodeAt(i)); if (g0) width += g0.adv; }
+  var tint = fgeSplashTint(color);
+  var pen = 0;
+  var x0 = L.cx - width * L.scale / 2;
+  for (var j = 0; j < text.length; j++) {
+    var g = fgeSplash.glyphs.get(text.charCodeAt(j));
+    if (!g) continue;
+    if (g.w > 0) ctx.drawImage(tint, g.x, g.y, g.w, cellH, x0 + pen * L.scale, top, g.w * L.scale, cellH * L.scale);
+    pen += g.adv;
+  }
+}
+function fgeSplashDraw() {
+  var canvas = fgeSplash.canvas || (fgeSplash.canvas = document.getElementById("fge-splash"));
+  if (!canvas) return;
+  var dpr = window.devicePixelRatio || 1;
+  var cw = Math.max(1, Math.round(canvas.clientWidth * dpr)), ch = Math.max(1, Math.round(canvas.clientHeight * dpr));
+  // WhyNot: 押した後に design を測り直さない — 押した後の design は WebLayer が main で 1 回だけ決め、その後は回しても変えない。
+  if (!fgeSplash.tapped && fgeSplash.bundle) fgeSplash.design = fgeSplashDesign(fgeSplash.bundle, fgeSplash.data);
+  var dw = fgeSplash.design.w, dh = fgeSplash.design.h;
+  var turns = 0;
+  if (fgeSplash.ratio === null) { var sec = (performance.now() - fgeSplash.startedAt) / 1000; turns = sec - Math.floor(sec); }
+  var sub = fgeSplashDeferredRatio();
+  var key = [cw, ch, dw, dh, fgeSplash.phase, fgeSplash.ratio, turns, sub, !!fgeSplash.font, !!fgeSplash.logo].join("|");
+  if (key === fgeSplash.drawn) return;
+  fgeSplash.drawn = key;
+  if (canvas.width !== cw || canvas.height !== ch) { canvas.width = cw; canvas.height = ch; }
+  var ctx = fgeSplash.ctx || (fgeSplash.ctx = canvas.getContext("2d"));
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.fillStyle = fgeSplashColors.backdrop;
+  ctx.fillRect(0, 0, cw, ch);
+  if (dw <= 0 || dh <= 0) return;
+  // 黒帯の付け方は RenderFrame.calcViewport と同じ（design の比のまま描き先に収まる最大の枠）。
+  var vpW, vpH;
+  if (cw / ch > dw / dh) { vpH = ch; vpW = Math.trunc(ch * dw / dh); } else { vpW = cw; vpH = Math.trunc(cw * dh / dw); }
+  var vpX = Math.floor((cw - vpW) / 2), vpY = Math.floor((ch - vpH) / 2), k = vpW / dw;
+  ctx.setTransform(k, 0, 0, k, vpX, vpY);
+  ctx.imageSmoothingEnabled = false;
+  var L = fgeSplashLayout(dw, dh);
+  fgeSplash.layout = { L: L, k: k / dpr, x: vpX / dpr, y: vpY / dpr, dh: dh };
+  if (fgeSplash.logo && L.logoH > 0) {
+    var lw = L.logoH * fgeSplash.logo.naturalWidth / fgeSplash.logo.naturalHeight;
+    ctx.drawImage(fgeSplash.logo, Math.floor(L.cx - lw / 2), L.logoTop, lw, L.logoH);
+  }
+  fgeSplashText(ctx, "Flix_GE", L, L.titleTop, fgeSplashColors.brand);
+  ctx.globalAlpha = 0.18;
+  ctx.fillStyle = fgeSplashColors.white;
+  ctx.fillRect(L.gaugeLeft, L.gaugeTop, L.gaugeW, L.gaugeH);
+  ctx.globalAlpha = 1;
+  if (fgeSplash.ratio !== null) {
+    var fw = Math.floor(L.gaugeW * fgeSplash.ratio);
+    if (fw >= 1) ctx.fillRect(L.gaugeLeft, L.gaugeTop, fw, L.gaugeH);
+  } else {
+    var bw = Math.floor(L.gaugeW * 0.25);
+    ctx.fillRect(L.gaugeLeft + Math.floor((L.gaugeW - bw) * turns), L.gaugeTop, bw, L.gaugeH);
+  }
+  // 2 本目の細い線: 後回しの素材。押すのを待たせる物ではないので、ゲージより細く薄く。
+  if (sub !== null) {
+    var sh = Math.max(1, Math.floor(L.gaugeH / 4));
+    var sy = L.gaugeTop + L.gaugeH + sh;
+    ctx.globalAlpha = 0.10;
+    ctx.fillRect(L.gaugeLeft, sy, L.gaugeW, sh);
+    ctx.globalAlpha = 0.75;
+    ctx.fillStyle = fgeSplashColors.brand;
+    ctx.fillRect(L.gaugeLeft, sy, Math.floor(L.gaugeW * sub), sh);
+    ctx.globalAlpha = 1;
+  }
+  fgeSplashText(ctx, fgeSplash.phase, L, L.phaseTop, fgeSplashColors.dim);
+  fgeSplashPlacePrompt();
+}
+// 「押して始める」の文言と指のアイコンを、一行の下の空きへ置く（CSS px）。
+function fgeSplashPlacePrompt() {
+  var el = document.getElementById("fge-start");
+  var at = fgeSplash.layout;
+  if (!el || !at) return;
+  var L = at.L;
+  var below = L.phaseTop + L.lineH;
+  var y = at.y + (below + (at.dh - below) * 0.42) * at.k;
+  var size = Math.max(15, Math.min(28, L.lineH * at.k * 0.55));
+  el.style.top = y.toFixed(1) + "px";
+  el.style.fontSize = size.toFixed(1) + "px";
+}
+function fgeSplashReady() {
+  fgeSplash.ready = true;
+  fgeProgress("ready", 1, 1);
+  fgeShow("fge-start", true);
+  fgeSplash.drawn = "";
+}
+// 触った点からの波紋（Material のリップル）。キーの時は文言の真ん中から。そのまま起動画面のゲージへつなぐ。
+function fgeSplashTapped(e) {
+  fgeSplash.tapped = true;
+  var boot = document.getElementById("fge-boot");
+  var start = document.getElementById("fge-start");
+  var x = innerWidth / 2, y = innerHeight / 2;
+  var point = e && e.changedTouches && e.changedTouches[0] ? e.changedTouches[0] : e;
+  if (point && typeof point.clientX === "number" && (point.clientX !== 0 || point.clientY !== 0)) { x = point.clientX; y = point.clientY; }
+  else if (start) { var r = start.getBoundingClientRect(); x = r.left + r.width / 2; y = r.top + r.height / 2; }
+  if (boot) {
+    var radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+    var ripple = document.createElement("div");
+    ripple.className = "fge-ripple";
+    ripple.style.cssText = "left:" + (x - radius) + "px;top:" + (y - radius) + "px;width:" + (2 * radius) + "px;height:" + (2 * radius) + "px";
+    ripple.addEventListener("animationend", function () { ripple.remove(); });
+    boot.appendChild(ripple);
+  }
+  if (start) {
+    start.classList.add("fge-leaving");
+    setTimeout(function () { fgeShow("fge-start", false); }, 220);
+  }
+  fgeProgress("starting up...", 0, 0);
 }
 function fgeShow(id, on) { var el = document.getElementById(id); if (el) el.style.display = on ? "" : "none"; }
 function fgeWireFpsOverlay() {
@@ -822,6 +1030,7 @@ function fgeWireFpsOverlay() {
   requestAnimationFrame(tick);
 }
 function fgeStarted() {
+  fgeSplash.running = false;
   fgeShow("fge-boot", false);
   fgeWireFpsOverlay();
   if (fgeDecodeTimes !== null) console.log("[loadtime] 最初のコマまで " + performance.now().toFixed(0) + " ms");
@@ -1174,6 +1383,7 @@ async function fgeBoot() {
     fgeCaptureDesign = bundle.design;
     document.documentElement.style.setProperty("--fge-aspect", String(bundle.design.w / bundle.design.h));
   }
+  fgeSplashInit(bundle);
   if (fgeWeb.virtualPad) fgeBuildPad(fgeWeb.virtualPad);
   fgeApplyLayout();
   window.addEventListener("resize", fgeApplyLayout);
@@ -1207,7 +1417,7 @@ async function fgeBoot() {
     fgeError(wasmFailed);
     return null;
   });
-  fgeProgress("loading", 0, total);
+  fgeProgress("loading assets...", 0, total);
   var jobs = files.map(function (path) {
     return async function () { fgeAssets.set(fgeNormPath(path), await fgeFetchAsset(path)); };
   }).concat(sounds.map(function (s) {
@@ -1224,19 +1434,18 @@ async function fgeBoot() {
   }));
   await fgeEachLimited(jobs, 6, async function (job) {
     await job();
-    fgeProgress("loading", ++done, total);
+    fgeProgress("loading assets...", ++done, total);
   });
   // WhyNot: files にもある絵を取り直さない — 同じ URL を 2 回運ぶ。readBytes のために生のバイトが表に残るメモリは、3D の入口の速さを問わない範囲として受ける。
   await fgeEachLimited(images, 6, async function (path) {
     var kept = fgeAssets.get(fgeNormPath(path));
     fgeImages.set(fgeNormPath(path), await fgeBitmapOf(kept || await fgeFetchAsset(path), path));
-    if (!kept) fgeProgress("loading", ++done, total);
+    if (!kept) fgeProgress("loading assets...", ++done, total);
   });
   fgeDeferred.bootReady = true;
   fgeDeferredStart();
   if (wasmFailed !== null) return;
-  fgeShow("fge-start", true);
-  fgeProgress("click / tap to start", total, total);
+  fgeSplashReady();
   if (fgeDecodeTimes !== null) console.log("[loadtime] タッチして開始まで " + performance.now().toFixed(0) + " ms");
   // WhyNot: 音を起こすのを await の後にしない — Safari は押した操作の処理の中で resume しないと断る版がある。
   // WhyNot: pointerdown で待たない — 指の pointerdown はユーザーの操作に数えられず（HTML の決まり）、Chrome は resume を断る。
@@ -1251,6 +1460,7 @@ async function fgeBoot() {
       fgeAudio.ctx.resume();
       fgeAudio.started = true;
       fgeNoteTap();
+      fgeSplashTapped(e);
       events.forEach(function (name) { window.removeEventListener(name, go); });
       resolve();
     };
@@ -1261,7 +1471,6 @@ async function fgeBoot() {
       console.log("[fge] storage.persist: " + (granted ? "granted（セーブは消されにくい）" : "denied（ブラウザが容量に困るとセーブが消えうる）"));
     }, function () { /* 頼めない頁 */ });
   }
-  fgeShow("fge-start", false);
 
   fgeResizeCanvas();
   new ResizeObserver(fgeResizeCanvas).observe(fgeCanvas);
@@ -1274,7 +1483,6 @@ async function fgeBoot() {
   fgeGl = fgeCheckedGl(fgeGl);
   fgeWireInput();
   fgeWireMouseCapture();
-  fgeProgress("starting", 0, 0);
   var teavm = await wasmLoad;
   if (teavm === null) return;
   try {
