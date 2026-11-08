@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "note": "音の通り道。amb_（鳴り続ける環境音）は ambience のバス、bgm_ は bgm のバス、se_（シナリオの効果音・心音と呼吸のループ・コメントの着信）と ui_（返事の音）は se のバス。バスの音量は設定の画面の値を Controls.mixerOf が掛ける（全体の音量は全部のバスに掛ける）。panel = 画面（バックログ・セーブ・設定）や確認のウィンドウを開いている間の聞こえ方（環境音と BGM を籠もらせる）。ducks の depth は効果音が鳴る間に環境音へ残す倍率。",
+  "defaultBus": "se",
+  "transitionSeconds": 0.6,
+  "buses": [
+    { "name": "ambience", "volume": 0.7, "lowpassGainHF": 1.0 },
+    { "name": "bgm", "volume": 0.6, "lowpassGainHF": 1.0 },
+    { "name": "se", "volume": 0.85, "lowpassGainHF": 1.0 }
+  ],
+  "routes": [
+    { "bus": "ambience", "prefixes": ["amb_"] },
+    { "bus": "bgm", "prefixes": ["bgm_"] },
+    { "bus": "se", "prefixes": ["se_", "ui_"] }
+  ],
+  "ducks": [
+    { "bus": "ambience", "by": ["se"], "depth": 0.8, "attackSeconds": 0.05, "holdSeconds": 0.2, "releaseSeconds": 0.6 }
+  ],
+  "cooldowns": [ { "prefix": "ui_cursor", "seconds": 0.04 }, { "prefix": "se_comment", "seconds": 0.12 } ],
+  "snapshots": [ { "name": "panel", "buses": [ { "name": "ambience", "lowpassGainHF": 0.25 }, { "name": "bgm", "lowpassGainHF": 0.3 } ] } ]
+}

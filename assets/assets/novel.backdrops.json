@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "note": "背景の場所（スマホのカメラに映る夜の廃屋の写真）と、怪異の重ね絵と、カメラの映像の質感。シナリオの <<bg 場所>> と <<apparition 重ね絵>> の名前はここの鍵。places: texture = project.json の textures の名前（空なら真っ暗な画面）、label = セーブ画面に出す場所の名前、exposure = その写真の明るさの倍率。overlays: x / y = 背景の絵の中の左上・h = 高さ（背景の幅・高さに対する割合。幅は絵の比のまま）、pixelWidth / pixelHeight = 絵の画素の大きさ（PNG を差し替えたら直す）、alpha = いちばん濃く映る時の不透明さ。camera: grain = ざらつき、vignette = 四隅の落ち、light / lightRadius = ライトの丸い光の外を沈める強さと半径、swayPx = 手持ちの揺れの幅（px）、lightSway = 丸い光の揺れの幅、bleed = 背景を画面より大きく敷く量（px）。switchSeconds = <<bg>> の切り替えの既定の秒。画像の出典は CREDITS.md と novel.credits.json。 blood: <<blood>> の絵（color = 垂れの色、key = R に垂れの濃さ・G に届く時刻（黒 = 早い）を入れた絵。どちらも textures の名前）。",
+  "places": {
+    "gate": {
+      "texture": "bg_gate",
+      "label": "門の前",
+      "exposure": 1.0
+    },
+    "entrance_out": {
+      "texture": "bg_entrance_out",
+      "label": "玄関の前",
+      "exposure": 1.0
+    },
+    "genkan": {
+      "texture": "bg_genkan",
+      "label": "玄関",
+      "exposure": 1.0
+    },
+    "hall1": {
+      "texture": "bg_hall1",
+      "label": "一階の廊下",
+      "exposure": 1.0
+    },
+    "living": {
+      "texture": "bg_living",
+      "label": "居間",
+      "exposure": 1.0
+    },
+    "kitchen": {
+      "texture": "bg_kitchen",
+      "label": "台所",
+      "exposure": 1.0
+    },
+    "stairs": {
+      "texture": "bg_stairs",
+      "label": "階段",
+      "exposure": 1.0
+    },
+    "hall2": {
+      "texture": "bg_hall2",
+      "label": "二階の廊下",
+      "exposure": 1.0
+    },
+    "room1": {
+      "texture": "bg_room1",
+      "label": "二階の一つ目の部屋",
+      "exposure": 1.0
+    },
+    "room_back": {
+      "texture": "bg_room_back",
+      "label": "二階の奥の部屋",
+      "exposure": 1.0
+    },
+    "oshiire": {
+      "texture": "bg_oshiire",
+      "label": "押し入れの中",
+      "exposure": 1.6
+    },
+    "hall_endless": {
+      "texture": "bg_hall_endless",
+      "label": "終わらない廊下",
+      "exposure": 1.0
+    },
+    "black": {
+      "texture": "",
+      "label": "暗闇",
+      "exposure": 1.0
+    }
+  },
+  "overlays": {
+    "kaii_window": {
+      "texture": "kaii_window",
+      "x": 0.64,
+      "y": 0.2,
+      "h": 0.37,
+      "pixelWidth": 68,
+      "pixelHeight": 388,
+      "alpha": 0.75
+    },
+    "kaii_gap": {
+      "texture": "kaii_gap",
+      "x": 0.355,
+      "y": 0.0,
+      "h": 1.0,
+      "pixelWidth": 146,
+      "pixelHeight": 1046,
+      "alpha": 0.6
+    }
+  },
+  "camera": {
+    "grain": 0.07,
+    "vignette": 0.6,
+    "light": 0.35,
+    "lightRadius": 0.55,
+    "swayPx": 6.0,
+    "lightSway": 0.03,
+    "bleed": 24.0
+  },
+  "switchSeconds": 0.6,
+  "blood": {
+    "color": "blood_color",
+    "key": "blood_key"
+  }
+}

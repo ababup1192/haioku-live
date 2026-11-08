@@ -1,0 +1,336 @@
+// 『廃屋配信』— 夜の廃屋をスマホで生配信する、縦型のホラーノベル（Yarn Spinner の部分集合）。台本は docs/scenario.txt。
+// 直したら bin/fge yarn build assets/talk（check が話し手・コマンド・ノードの名前を src/Talk.flix の語彙で止める）。
+//
+// 書き方:
+//   地の文は話し手を書かない。主人公の台詞は「hero: ……」（画面では「」で包む。×××× は novel.story.json の heroName に替わる）。
+//   演出はコマンドで書く（引数の意味は src/Stage.flix の冒頭）:
+//     <<bg 場所 dark|pan|run 秒>>    背景を替える（場所は assets/novel.backdrops.json の places。dark = 短い暗転・pan = カメラを振る流し・run = 走る）。
+//                                    前の場所から歩く 3D の道筋（assets/walk/walks.json）があれば、その道筋を歩いて替わる（run は走る道筋を選ぶ）
+//     <<feed live>> / <<feed lost>>  配信を始める / 配信が切れる
+//     <<viewers 数>>                 配信の表示の視聴者数
+//     <<signal 4G|5G 本数>> / <<signal none>>  スマホの状態バーの電波（0〜4 本）/ 圏外
+//     <<battery 数>>                 スマホの状態バーのバッテリーの残り（%。20 以下で赤）
+//     <<comment 名前 本文>>          コメントを 1 件流す（クリックを待たずに少しずつ流れる）。<<comment_red>> は赤い字・<<comment_clear>> で欄を空にする
+//     <<se 名>>                      効果音を 1 回（名前は project.json の sounds）
+//     <<ambience 名 名…>> / <<ambience off>>   鳴り続ける音を替える / 止める
+//     <<bgm 名>> / <<bgm 名 up>> / <<bgm off>> BGM を鳴らす / 少し大きく鳴らす / 止める
+//     <<silence>>                    環境音も BGM も止める
+//     <<apparition 重ね絵>>          怪異が 1 秒ほど映る（重ね絵は novel.backdrops.json の overlays）
+//     <<blood>> / <<vibrate>> / <<crash>>  画面の上から血が垂れる / スマホが短く振動する / 激しく揺れて砂嵐が走る
+//     <<wait 秒>>                    待つ（エンジンの実行器が待つ）
+
+title: Gate
+---
+<<ambience amb_wind>>
+<<bg gate dark 1.6>>
+<<signal 4G 3>>
+<<battery 31>>
+<<feed live>>
+<<wait 1.2>>
+夜の山道を抜けた先に、その家はあった。
+二階建ての一軒家。窓はすべて暗く、割れたガラスの向こうは、何も見えない。
+カメラのライトが、色あせた表札を照らす。文字は、掠れて読めなかった。
+hero: はい、どうも。××××です
+hero: 今夜はですね、例の廃屋から生配信でお送りします
+<<viewers 3>>
+<<comment ポi きた>>
+<<comment ろん こんばんはー>>
+<<comment sasaki＠ こんばんは>>
+hero: お、3人も来てくれてる。ありがとうございます
+正直、少ない。
+でもいつもと比べたら多い方だ。
+<<se se_cloth>>
+<<comment ポi 同接3ｗｗ>>
+<<comment ろん 伸び悩み配信者、今日も元気>>
+hero: ははは、これから人気出る予定ですから
+hero: それより、ここ、知ってます？　何年も前に住人がいなくなって、それから誰も近づかないって噂の家です
+hero: まあ、噂は噂。今夜は俺が、奥まで全部お見せします
+強がってはみたものの、門の前で、足は少しだけ止まっていた。
+行くなら、今だ。視聴者が飽きないように。
+hero: じゃあ、入りまーす
+<<se se_gate>>
+<<wait 0.8>>
+<<jump Entrance>>
+===
+
+title: Entrance
+---
+<<bg entrance_out dark 1.0>>
+<<signal 4G 2>>
+<<battery 29>>
+<<wait 0.6>>
+玄関の扉には、鍵がかかっていなかった。
+hero: 鍵、開いてますね。……最初から、開いてる
+<<comment sasaki＠ どうぞおあがりくださいｗ>>
+hero: ま、喜んどきましょう
+<<comment ポi そだね>>
+<<comment ろん 不法侵入ｗｗ>>
+中に入ることにした。
+<<se se_door_heavy>>
+<<wait 0.9>>
+<<jump Inside>>
+===
+
+title: Inside
+---
+<<bg genkan dark 1.2>>
+<<battery 26>>
+<<ambience amb_house>>
+<<bgm bgm_suspense>>
+<<wait 0.8>>
+一歩入っただけで、空気が変わったように思う。
+外の風の音が遠ざかり、代わりに、黴と古い木の匂いが鼻の奥に残る。
+ライトの丸い光の外は、完全な暗闇だった。
+hero: うわ、埃すごい。……あと、当然だけど静かだ
+<<se se_creak>>
+hero: 俺の足音しか、しないですね
+<<bg hall1 pan 0.8>>
+廊下を進む。まず、一階から回ることにした。
+<<bg living pan 0.8>>
+左手に居間。
+机に、ヒビの入ったテレビがあった。
+hero: いかにも、廃墟ですね
+<<comment ろん あたりまえやろ>>
+今には、特に珍しいものはなさそうだ。
+<<se se_timer>>
+hero: ⁉
+なんだ⁉
+hero: ごくん
+思わず生唾を飲み込む。
+奥の部屋から聞こえた。
+<<comment sasaki＠ いけいけいけいけいけ>>
+<<comment ポi あ～あ>>
+恐いが、撮れ高のチャンス。
+進むと台所があった。
+<<bg kitchen pan 0.8>>
+<<se se_sliding>>
+台所は、居間より少しだけ生活の跡が残っていた。
+流しに、割れた茶碗。冷蔵庫の扉は半開きで、中は空だった。
+<<se se_timer>>
+ボロっちいタイマーが鳴っていた。
+これが鳴っていたのか。
+hero: あー驚いて損した
+恐らく、古いタイマーが誤動作したんだろう。
+<<se se_creak>>
+<<wait 0.9>>
+<<se se_groan>>
+<<wait 1.0>>
+hero: ……今の、何だ？
+<<bg hall1 pan 0.6>>
+廊下は暗いままだった。誰もいない。
+ライトを左右に振る。埃が舞うだけだった。
+<<comment ろん ビビり過ぎ>>
+<<comment ポi 早くなんか起きろ>>
+hero: ははは、いまんとこ大したことないですね
+hero: じゃあ、二階、行ってみますか
+<<bgm off>>
+階段の前で、ちょっと立ち止まって、考えた。
+本当に進んで大丈夫だろうか？
+どこか不安がある。
+この廃屋はおかしい気がした。
+でも、人気がないと、配信者として生活もできない。
+hero: 行きまーーす。ここからが本番なんで。チャンネル登録よろしく！
+わざと明るく振舞って進むことにした。
+ここまできて、引き下がれるか。
+<<comment sasaki＠ いいねぇ>>
+<<jump Upstairs>>
+===
+
+title: Upstairs
+---
+<<bg stairs dark 0.9>>
+<<signal 4G 1>>
+<<battery 22>>
+<<bgm bgm_suspense up>>
+<<wait 2.2>>
+<<bg hall2 pan 0.9>>
+<<wait 0.6>>
+二階は、一階より寒かった。
+気温が下がったというより、肌に触れる空気そのものが、冷たく湿っていた。
+廊下の両側に、部屋の扉が並んでいる。
+そのときだった。
+<<se se_groan_far>>
+<<wait 1.2>>
+hero: ……っ
+腕に、ぶわっと鳥肌が立った。
+寒気が、背筋を一気に駆け上がる。
+hero: 今の、聞こえました？　……人の声、みたいな
+<<comment ろん 聞こえた>>
+<<comment ポi 風じゃね>>
+<<comment sasaki＠ さぁ？>>
+hero: ……………はは
+笑ったが、声が少し震えた。
+目の前の扉に、手をかける。いちばん手前の部屋だ。
+<<se se_knob>>
+<<wait 0.9>>
+<<bg room1 dark 0.8>>
+<<wait 0.5>>
+<<apparition kaii_window>>
+<<wait 1.2>>
+hero: ――っ！
+ライトを窓際に戻す。
+何もない。カーテンの残骸が、揺れているだけだった。
+hero: 今、そこ……
+<<comment ろん 何かいた！？>>
+<<comment ポi 見えなかった>>
+<<comment sasaki＠ さあ？>>
+後ずさる。
+<<se se_splash>>
+hero: な、これって……
+<<blood>>
+<<wait 3.0>>
+血だ、血が水たまりになっている。
+それも、まだ生温かく、古いものではない。
+hero: はぁはぁはぁ……
+もう、ここにいてはいけない。
+頭の中で、はっきりと警報が鳴っていた。
+hero: 帰ります！　今日は、ここまでです
+hero: ……ごめんなさい、帰ります！
+<<jump Escape>>
+===
+
+title: Escape
+---
+<<bg hall2 run 0.4>>
+<<battery 17>>
+<<wait 0.6>>
+<<bg stairs run 0.4>>
+<<wait 0.9>>
+一階に下り、廊下を玄関へ向かう。
+あったはずだ。ここをまっすぐ行けば、玄関だったはずだ。
+<<bg hall_endless run 0.5>>
+<<wait 0.4>>
+――扉が、ない。
+玄関だった場所は、どこにもない。
+ただ、廊下がどこまでも続いている。
+hero: ……は？
+hero: こっ、……なんで⁉
+hero: なんで……っ。入ってきたの、ここだろ！？
+<<se se_creak>>
+<<wait 0.6>>
+hero: ……
+<<se se_step_heavy>>
+<<wait 0.6>>
+気配が、近づいている。
+さっきの呻き声より、ずっとはっきりと。ずっと、近くに。
+hero: っ……！
+逃げるなら、上しかなかった。
+玄関が駄目なら、窓だ。二階の窓からでも、外に出る。
+<<bg stairs run 0.4>>
+<<wait 0.9>>
+<<bg hall2 run 0.4>>
+<<wait 0.3>>
+いちばん奥の部屋へ飛び込む。
+<<se se_door_slam>>
+<<wait 0.5>>
+<<se se_lock>>
+<<wait 0.4>>
+<<jump Closet>>
+===
+
+title: Closet
+---
+<<bg room_back dark 0.6>>
+<<battery 12>>
+<<wait 0.4>>
+hero: はぁ、はぁ……
+部屋の隅に、押し入れがあった。
+考えるより先に、体が動いていた。
+<<se se_fusuma>>
+<<wait 0.5>>
+<<se se_futon>>
+<<wait 0.5>>
+<<bg oshiire dark 1.2>>
+<<bgm off>>
+<<wait 0.8>>
+押し入れの中に身をかがめ、襖を閉める。
+中は狭く、古い布団の匂いがした。スマホのライトを消し、画面の明かりだけを最低まで落とす。
+息が荒い。このままでは、聞こえてしまう。
+口を押さえて、画面を見た。
+<<viewers 1>>
+<<signal none>>
+<<wait 0.6>>
+hero: ……はぁはぁ
+残っているのは、sasaki＠だけだった。
+hero: みんな……落ちた、ちゃった……ははっ？
+hero: 残ってるsasaki＠さん、聞こえますか。お願い、警察……警察、呼んでください
+囁くのが精一杯だった。
+<<comment sasaki＠ よべないよ>>
+<<comment sasaki＠ ここは、違うから>>
+hero: ……何、言ってるんですか
+hero: じゃあ、もう、誰でも……！　俺、ここから出られなくて
+<<comment sasaki＠ でられないよ(笑)>>
+<<comment sasaki＠ 縺ｩ縺ゑｽ医?縺峨≠?医?縺峨≠>>
+hero: ……っ
+文字化けして、コメント欄が、止まった。
+何を聞いても、もう返事はなかった。
+<<se se_creak>>
+<<wait 0.6>>
+hero: ……っ
+息を止める。
+<<se se_step_heavy>>
+<<wait 0.8>>
+<<se se_lock_rattle>>
+<<wait 1.0>>
+開かない。鍵は、かけたはずだ。
+<<se se_door_slow>>
+<<wait 1.2>>
+鍵がかかっているはずの扉が、開いた。
+部屋の中に、重い足音が入ってきた。
+<<se se_step_heavy>>
+<<wait 0.7>>
+<<se se_step_heavy>>
+<<wait 0.7>>
+心臓の音が、うるさい。
+<<ambience se_heartbeat>>
+外に聞こえているんじゃないかと思うほど、うるさかった。
+<<ambience se_heartbeat se_breath>>
+足音は、押し入れの前で止まった。
+――襖一枚、先に、何かが立っている。
+動くな。声を出すな。息もするな。
+何も考えるな。ただ、やり過ごせ。
+長い沈黙があった。
+<<se se_step_heavy>>
+<<wait 0.8>>
+<<se se_step_heavy>>
+<<wait 0.6>>
+<<se se_step_heavy>>
+<<wait 0.6>>
+<<se se_door_close>>
+<<wait 1.4>>
+……行った。
+行った、はずだ。
+hero: は、はぁ……
+押さえていた口から、手が落ちた。
+<<ambience se_breath>>
+全身の力が抜けて、背中が布団に沈む。
+生きている。助かった！！
+震える手で、スマホの画面を見る。
+配信がまだ続いているか、確認しようとして――。
+<<jump Found>>
+===
+
+title: Found
+---
+<<battery 8>>
+<<silence>>
+<<vibrate>>
+<<se se_vibrate>>
+<<comment_clear>>
+<<bg black dark 0.5>>
+<<wait 0.9>>
+画面いっぱいの暗闇に、コメントが一文だけ、流れた。
+<<comment_red sasaki＠ みいつけた>>
+<<wait 2.2>>
+<<bg oshiire dark 0>>
+<<apparition kaii_gap>>
+<<wait 1.2>>
+<<crash>>
+<<se se_noise>>
+<<se se_scream>>
+<<wait 1.9>>
+<<feed lost>>
+<<silence>>
+<<bg black dark 0>>
+<<wait 2.5>>
+===

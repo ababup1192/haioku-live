@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "note": "字と帯と配信の表示の色（背景の色はカメラの写真そのもの）。色は 3 つ: カメラの暗部の黒〜青灰（panel）/ LED の白い光（ink・accent）/ 配信表示の赤（live。LIVE の札と最後の赤いコメントと残りの少ないバッテリーだけ）。ink = 本文、inkSeen = 既読の行、accent = 選んでいる物・オートとスキップの点灯、panel = 下の帯・画面の地、chatText = コメントの本文、chatNames = コメントの名前 → 名前の色（小さく色分け）、chatName = それ以外の名前の色。",
+  "ink": "#eef0f2",
+  "inkSeen": "#aab8c8",
+  "accent": "#e8eef5",
+  "panel": "#07090d",
+  "live": "#e0302a",
+  "chatText": "#f4f6f8",
+  "chatNames": {
+    "ポi": "#7fc8e8",
+    "ろん": "#9ad48a",
+    "sasaki＠": "#c9a4e0"
+  },
+  "chatName": "#9fb3c8"
+}

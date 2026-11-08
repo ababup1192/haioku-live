@@ -1,0 +1,6 @@
+{
+  "speakers": ["hero"],
+  "nodes": ["Gate"],
+  "tags": {},
+  "commands": ["bg", "feed", "viewers", "signal", "battery", "comment", "comment_red", "comment_clear", "se", "ambience", "bgm", "silence", "apparition", "blood", "vibrate", "crash"]
+}

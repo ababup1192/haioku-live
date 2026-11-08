@@ -1,0 +1,379 @@
+{
+  "version": 1,
+  "title": "廃屋配信",
+  "designWidth": 540,
+  "designHeight": 960,
+  "windowWidth": 540,
+  "windowHeight": 960,
+  "clearColor": {
+    "r": 0.02,
+    "g": 0.025,
+    "b": 0.035
+  },
+  "maxDeltaTime": 0.05,
+  "// textures": "背景（スマホのカメラの映像）と怪異の重ね絵。名前は assets/novel.backdrops.json の places と overlays の texture と対。",
+  "textures": [
+    {
+      "name": "bg_gate",
+      "path": "assets/bg/gate.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_entrance_out",
+      "path": "assets/bg/entrance_out.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_genkan",
+      "path": "assets/bg/genkan.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_hall1",
+      "path": "assets/bg/hall1.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_living",
+      "path": "assets/bg/living.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_kitchen",
+      "path": "assets/bg/kitchen.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_stairs",
+      "path": "assets/bg/stairs.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_hall2",
+      "path": "assets/bg/hall2.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_room1",
+      "path": "assets/bg/room1.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_room_back",
+      "path": "assets/bg/room_back.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_oshiire",
+      "path": "assets/bg/oshiire.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_hall_endless",
+      "path": "assets/bg/hall_endless.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "kaii_window",
+      "path": "assets/bg/kaii_window.png",
+      "hasAlpha": true
+    },
+    {
+      "name": "kaii_gap",
+      "path": "assets/bg/kaii_gap.png",
+      "hasAlpha": true
+    },
+    {
+      "name": "blood_color",
+      "path": "assets/bg/blood_color.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "blood_key",
+      "path": "assets/bg/blood_key.png",
+      "hasAlpha": false
+    }
+  ],
+  "// glyphs": "起動時に焼く字。used = ソースとアセットにある字を先に焼く（シナリオの字がそろってからタイトル画面が出る）",
+  "glyphs": "used",
+  "// fonts": "字。default = 明朝（地の文・台詞・タイトル・メニュー）、gothic_bold = ゴシック体の太字（配信の表示・スマホの状態バー・コメントの名前）、gothic = ゴシック体（コメントの本文）。どれも使う字だけのサブセット（作り直しは make font-subset）。",
+  "fonts": [
+    {
+      "name": "default",
+      "path": "assets/ShipporiMincho-Regular.subset.ttf",
+      "fontSize": 32.0
+    },
+    {
+      "name": "gothic_bold",
+      "path": "assets/MPLUS1p-Bold.subset.ttf",
+      "fontSize": 32.0
+    },
+    {
+      "name": "gothic",
+      "path": "assets/MPLUS1p-Medium.subset.ttf",
+      "fontSize": 32.0
+    }
+  ],
+  "sounds": [
+    {
+      "name": "amb_wind",
+      "path": "assets/sfx/amb_wind.wav",
+      "looping": true
+    },
+    {
+      "name": "amb_house",
+      "path": "assets/sfx/amb_house.wav",
+      "looping": true
+    },
+    {
+      "name": "se_cloth",
+      "path": "assets/sfx/se_cloth.wav",
+      "looping": false
+    },
+    {
+      "name": "se_gate",
+      "path": "assets/sfx/se_gate.wav",
+      "looping": false
+    },
+    {
+      "name": "se_door_heavy",
+      "path": "assets/sfx/se_door_heavy.wav",
+      "looping": false
+    },
+    {
+      "name": "se_creak",
+      "path": "assets/sfx/se_creak.wav",
+      "looping": false
+    },
+    {
+      "name": "se_timer",
+      "path": "assets/sfx/se_timer.wav",
+      "looping": false
+    },
+    {
+      "name": "se_sliding",
+      "path": "assets/sfx/se_sliding.wav",
+      "looping": false
+    },
+    {
+      "name": "se_groan",
+      "path": "assets/sfx/se_groan.wav",
+      "looping": false
+    },
+    {
+      "name": "se_groan_far",
+      "path": "assets/sfx/se_groan_far.wav",
+      "looping": false
+    },
+    {
+      "name": "se_knob",
+      "path": "assets/sfx/se_knob.wav",
+      "looping": false
+    },
+    {
+      "name": "se_splash",
+      "path": "assets/sfx/se_splash.wav",
+      "looping": false
+    },
+    {
+      "name": "se_run",
+      "path": "assets/sfx/se_run.wav",
+      "looping": false
+    },
+    {
+      "name": "se_stairs_slow",
+      "path": "assets/sfx/se_stairs_slow.wav",
+      "looping": false
+    },
+    {
+      "name": "se_stairs_down",
+      "path": "assets/sfx/se_stairs_down.wav",
+      "looping": false
+    },
+    {
+      "name": "se_stairs_up",
+      "path": "assets/sfx/se_stairs_up.wav",
+      "looping": false
+    },
+    {
+      "name": "se_door_slam",
+      "path": "assets/sfx/se_door_slam.wav",
+      "looping": false
+    },
+    {
+      "name": "se_lock",
+      "path": "assets/sfx/se_lock.wav",
+      "looping": false
+    },
+    {
+      "name": "se_fusuma",
+      "path": "assets/sfx/se_fusuma.wav",
+      "looping": false
+    },
+    {
+      "name": "se_futon",
+      "path": "assets/sfx/se_futon.wav",
+      "looping": false
+    },
+    {
+      "name": "se_lock_rattle",
+      "path": "assets/sfx/se_lock_rattle.wav",
+      "looping": false
+    },
+    {
+      "name": "se_door_slow",
+      "path": "assets/sfx/se_door_slow.wav",
+      "looping": false
+    },
+    {
+      "name": "se_step_heavy",
+      "path": "assets/sfx/se_step_heavy.wav",
+      "looping": false
+    },
+    {
+      "name": "se_door_close",
+      "path": "assets/sfx/se_door_close.wav",
+      "looping": false
+    },
+    {
+      "name": "se_heartbeat",
+      "path": "assets/sfx/se_heartbeat.wav",
+      "looping": true
+    },
+    {
+      "name": "se_breath",
+      "path": "assets/sfx/se_breath.wav",
+      "looping": true
+    },
+    {
+      "name": "se_vibrate",
+      "path": "assets/sfx/se_vibrate.wav",
+      "looping": false
+    },
+    {
+      "name": "se_noise",
+      "path": "assets/sfx/se_noise.wav",
+      "looping": false
+    },
+    {
+      "name": "se_scream",
+      "path": "assets/sfx/se_scream.wav",
+      "looping": false
+    },
+    {
+      "name": "se_comment",
+      "path": "assets/sfx/se_comment.wav",
+      "looping": false
+    },
+    {
+      "name": "bgm_suspense",
+      "path": "assets/sfx/bgm_suspense.wav",
+      "looping": true
+    },
+    {
+      "name": "ui_cursor",
+      "path": "assets/sfx/ui_cursor.wav",
+      "looping": false
+    },
+    {
+      "name": "ui_open",
+      "path": "assets/sfx/ui_open.wav",
+      "looping": false
+    },
+    {
+      "name": "ui_save",
+      "path": "assets/sfx/ui_save.wav",
+      "looping": false
+    },
+    {
+      "name": "ui_page",
+      "path": "assets/sfx/ui_page.wav",
+      "looping": false
+    }
+  ],
+  "editor": {
+    "resources": [
+      {
+        "id": "story",
+        "pattern": "assets/novel.story.json",
+        "title": "画面の言葉（タイトル画面・ボタン・セーブ）と主人公の名前",
+        "role": "material",
+        "schema": "assets/story.schema.json"
+      },
+      {
+        "id": "backdrops",
+        "pattern": "assets/novel.backdrops.json",
+        "title": "背景の場所（カメラの映像）・怪異の重ね絵・映像の質感",
+        "role": "material",
+        "schema": "assets/backdrops.schema.json"
+      },
+      {
+        "id": "theme",
+        "pattern": "assets/novel.theme.json",
+        "title": "字と配信の表示の色",
+        "role": "material",
+        "schema": "assets/theme.schema.json"
+      },
+      {
+        "id": "credits",
+        "pattern": "assets/novel.credits.json",
+        "title": "クレジット（画像・フォント・音の出典）",
+        "role": "material",
+        "schema": "assets/credits.schema.json"
+      },
+      {
+        "id": "kind",
+        "pattern": "assets/novel.kind.json",
+        "title": "手触り（字の大きさ・オート・スキップ・コメントの間・揺れ・演出の長さ）",
+        "role": "tuning",
+        "schema": "assets/kind.schema.json"
+      },
+      {
+        "id": "keys",
+        "pattern": "assets/novel.keys.json",
+        "title": "操作（キーの割り当て）",
+        "role": "tuning",
+        "schema": "assets/keys.schema.json"
+      },
+      {
+        "id": "portrait",
+        "pattern": "assets/novel.portrait.json",
+        "title": "縦の画面の字とボタンの大きさ",
+        "role": "tuning",
+        "schema": "assets/portrait.schema.json"
+      },
+      {
+        "id": "mixer",
+        "pattern": "assets/novel.mixer.json",
+        "title": "音の通り道（環境音・BGM・効果音のバス）",
+        "role": "tuning"
+      },
+      {
+        "id": "project",
+        "pattern": "project.json",
+        "schema": "project.schema.json",
+        "title": "ゲームの題・画面",
+        "role": "tuning"
+      },
+      {
+        "id": "walks",
+        "pattern": "assets/walk/walks.json",
+        "title": "3D の場面の切り替え（カメラの道筋・音・揺れ。Blender から書き出した表）",
+        "role": "material"
+      }
+    ]
+  },
+  "web": {
+    "keysDoc": "assets/novel.keys.json",
+    "touchGestures": {
+      "longPress": "back",
+      "swipeLeft": "rollback"
+    },
+    "orientation": "portrait",
+    "portraitDesign": {
+      "width": 540,
+      "minHeight": 960
+    }
+  },
+  "// sounds": "音の名前 → ファイルの対応はここ 1 か所（名前 = ファイル名の茎）。拡張子を替える時は make sfx-ext EXT=ogg（Makefile）。鳴り続ける音（amb_・bgm_・心音と呼吸）は looping。"
+}

@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "note": "クレジットに流す行（上から順）。style は heading（見出し）/ body（本文）/ small（出典の URL など）/ gap（空き）。画像・フォント（SIL OFL）・音の表記は CREDITS.md と同じ物を置く。",
+  "rows": [
+    {
+      "text": "廃屋配信",
+      "style": "heading"
+    },
+    {
+      "text": "",
+      "style": "gap"
+    },
+    {
+      "text": "背景と怪異の画像",
+      "style": "heading"
+    },
+    {
+      "text": "制作者（Codex で生成）",
+      "style": "body"
+    },
+    {
+      "text": "",
+      "style": "gap"
+    },
+    {
+      "text": "効果音",
+      "style": "heading"
+    },
+    {
+      "text": "効果音ラボ",
+      "style": "body"
+    },
+    {
+      "text": "https://soundeffect-lab.info/",
+      "style": "small"
+    },
+    {
+      "text": "",
+      "style": "gap"
+    },
+    {
+      "text": "BGM",
+      "style": "heading"
+    },
+    {
+      "text": "Where the Light Never Speaks / 松浦洋介",
+      "style": "body"
+    },
+    {
+      "text": "DOVA-SYNDROME",
+      "style": "small"
+    },
+    {
+      "text": "",
+      "style": "gap"
+    },
+    {
+      "text": "フォント",
+      "style": "heading"
+    },
+    {
+      "text": "しっぽり明朝 — The Shippori Mincho Project Authors",
+      "style": "body"
+    },
+    {
+      "text": "SIL Open Font License 1.1",
+      "style": "small"
+    },
+    {
+      "text": "M PLUS 1p — The M+ Project Authors",
+      "style": "body"
+    },
+    {
+      "text": "SIL Open Font License 1.1",
+      "style": "small"
+    },
+    {
+      "text": "",
+      "style": "gap"
+    },
+    {
+      "text": "作り",
+      "style": "heading"
+    },
+    {
+      "text": "flix_game_engine",
+      "style": "body"
+    },
+    {
+      "text": "",
+      "style": "gap"
+    },
+    {
+      "text": "配信は、終了しました。",
+      "style": "body"
+    }
+  ]
+}
