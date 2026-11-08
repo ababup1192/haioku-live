@@ -99,7 +99,27 @@
   <button type="button" onclick="document.body.classList.add('fge-rotate-ok')">このまま遊ぶ</button>
 </div>
 <div id="fge-error" style="display: none"></div>
-<script src="wasm-gc-runtime.js?v=7de80c096802"></script>
-<script src="fge-web.js?v=7de80c096802"></script>
+<script>
+(function () {
+  var baked = "1001b92301e8";
+  var started = false;
+  function boot(v) {
+    if (started) return;
+    started = true;
+    ["wasm-gc-runtime.js", "fge-web.js"].forEach(function (name) {
+      var s = document.createElement("script");
+      s.src = name + "?v=" + encodeURIComponent(v || baked);
+      s.async = false;
+      document.body.appendChild(s);
+    });
+  }
+  setTimeout(function () { boot(baked); }, 3000);
+  try {
+    fetch("version.txt", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.text() : ""; })
+      .then(function (t) { boot(/^[0-9a-f]{6,64}$/.test(t.trim()) ? t.trim() : baked); }, function () { boot(baked); });
+  } catch (e) { boot(baked); }
+})();
+</script>
 </body>
 </html>

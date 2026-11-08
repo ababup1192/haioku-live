@@ -427,6 +427,9 @@ function fgeApplyLayout() {
 }
 
 // canvas の上の指: 離した時にタップ（その位置のクリック）・縦のドラッグはホイール・横に払うとスワイプ・長押し。
+// 横のドラッグの間は、マウスの左ボタンを押したまま動かすのと同じに見せる（横と決まった所で押し始め、位置は指に付いて動く。離すと押しも離れる）。
+// スライダーを指で動かせるように。
+// 長押しは、動かさずに fgeLongPressMs 以上置いてから離した時に出す（離した時のタップの代わり）。
 // 主な指（isPrimary）だけを追う。
 var fgeTouchSlop = 16;
 var fgeWheelStep = 40;
@@ -443,21 +446,28 @@ function fgeGestureDown(e, canvasXY) {
   if (!e.isPrimary) return;
   if (fgeGesture && fgeGesture.timer) clearTimeout(fgeGesture.timer);
   var g = { id: e.pointerId, x0: e.clientX, y0: e.clientY, lastY: e.clientY, px: canvasXY.x, py: canvasXY.y,
-            mode: "tap", wheelRest: 0, wheelSign: 0, timer: 0 };
+            mode: "tap", wheelRest: 0, wheelSign: 0, timer: 0, held: false };
   if (fgeGestureKey("longPress")) {
     g.timer = setTimeout(function () {
-      if (fgeGesture === g && g.mode === "tap") { g.mode = "done"; fgeTapKey(fgeGestureKey("longPress")); }
+      // WhyNot: 置いている間に出さない — スライダーのつまみに指を置いて少し止めてから動かすと、戻るが出て画面が閉じる。
+      if (fgeGesture === g && g.mode === "tap") g.held = true;
     }, fgeLongPressMs);
   }
   fgeGesture = g;
 }
-function fgeGestureMove(e) {
+function fgeGestureMove(e, canvasXY) {
   var g = fgeGesture;
   if (!g || g.id !== e.pointerId) return;
   var dx = e.clientX - g.x0, dy = e.clientY - g.y0;
   if (g.mode === "tap" && dx * dx + dy * dy > fgeTouchSlop * fgeTouchSlop) {
     g.mode = Math.abs(dy) > Math.abs(dx) ? "scroll" : "swipe";
     if (g.timer) { clearTimeout(g.timer); g.timer = 0; }
+  }
+  if (g.mode === "swipe") {
+    // WhyNot: 押した拍（latch）を立てない — 横に払っただけで、払い始めの所のボタンが押される。
+    fgePointer.x = canvasXY.x;
+    fgePointer.y = canvasXY.y;
+    fgePointer.buttons[0] = true;
   }
   if (g.mode === "scroll") {
     // 指を下へ引くと上へ回したホイール（前の行へ）。1 回のドラッグの中で、最初に出た向きと逆の刻みは捨てる（開いた直後に閉じない）。
@@ -476,7 +486,10 @@ function fgeGestureUp(e) {
   if (!g || g.id !== e.pointerId) return;
   fgeGesture = null;
   if (g.timer) clearTimeout(g.timer);
-  if (g.mode === "tap") {
+  if (g.mode === "swipe") fgePointer.buttons[0] = false;
+  if (g.mode === "tap" && g.held) {
+    fgeTapKey(fgeGestureKey("longPress"));
+  } else if (g.mode === "tap") {
     // WhyNot: 離した所で押さない — 指を離す時のずれで隣のボタンを押す。押した時の位置に戻してから押す。
     fgePointer.x = g.px;
     fgePointer.y = g.py;
@@ -495,6 +508,7 @@ function fgeGestureCancel(e) {
   var g = fgeGesture;
   if (!g || g.id !== e.pointerId) return;
   if (g.timer) clearTimeout(g.timer);
+  if (g.mode === "swipe") fgePointer.buttons[0] = false;
   fgeGesture = null;
 }
 
@@ -566,7 +580,7 @@ function fgeWireInput() {
   };
   fgeCanvas.addEventListener("pointermove", function (e) {
     if (e.pointerType !== "touch") fgeNotePointer(e);
-    if (e.pointerType === "touch") { fgeGestureMove(e); return; }
+    if (e.pointerType === "touch") { fgeGestureMove(e, toCanvas(e)); return; }
     var p = place(e);
     // WhyNot: 位置の差で動きを出さない — 初めの 1 回と、canvas の外から戻った時に跳ぶ。
     if (document.hasFocus()) { fgePointer.dx += (e.movementX || 0) * p.s.sx; fgePointer.dy += (e.movementY || 0) * p.s.sy; }
@@ -937,4 +951,6 @@ async function fgeBoot() {
   }
 }
 
-window.addEventListener("load", function () { fgeBoot().catch(function (e) { fgeError("起動できません: " + (e && e.stack || e)); }); });
+// WhyNot: load だけを待たない — index.html の起動役は version.txt を確かめてからこの js を読むので、読み終えた時には load が済んでいることがある。
+function fgeStart() { fgeBoot().catch(function (e) { fgeError("起動できません: " + (e && e.stack || e)); }); }
+if (document.readyState === "complete") fgeStart(); else window.addEventListener("load", fgeStart);

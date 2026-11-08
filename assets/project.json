@@ -374,6 +374,8 @@
       "longPress": "back",
       "swipeLeft": "rollback"
     },
+    "embed": ["assets/talk/dialogue.json"],
+    "omit": ["assets/talk/*.yarn", "assets/*.schema.json"],
     "orientation": "portrait",
     "portraitDesign": {
       "width": 540,
