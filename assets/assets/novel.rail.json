@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "title": "縦の画面の操作の列",
+  "note": "右端に縦一列に並ぶアイコンのボタン（上から しおり・ログ・オート。並びはコードで決まっている）と、右上の配信表示の …（設定・タイトルへ・隠すのメニュー）の大きさ（design px。幅 540 の中の px）。置き場所の決まりは src/Layout.flix。anchor = 列の積み方（bottom = 画面の下から上へ積む・top = … のすぐ下から下へ積む）、railBottom = 列の下端と画面の下の間（bottom の時だけ使う）、railGap = … と列の間（top の時だけ使う）、iconSize = 列の丸の直径（375 幅で 34 CSS px）、buttonHeight = 列の 1 段の押せる正方形の辺（375 幅で 44 CSS px は 66）、railRight = 列の丸の右端と画面の右端の間（セーフエリアの分）、moreTop / moreSize / moreHeight = … の押せる正方形の上端の位置（20 で配信者のラベルの真ん中にそろう）・丸の直径・押せる正方形の辺（… の丸の右端は配信者のラベルの左端と同じ余白にそろう）、longPressSeconds = 列のボタンを長押しと見る秒（ログ・しおりは名前を出し、オートはスキップに入る。本文を押した時の長押し = novel.kind.json の longPressSeconds とは別の値）、tooltipTextSize = 長押しで出す名前の字、saveLoadItemWidth = しおりから開く [セーブ｜ロード] の 1 つの幅、menuWidth = … から開くメニューの幅。メニューの 1 項目の字と高さは novel.portrait.json の menuItem*。",
+  "anchor": "bottom",
+  "iconSize": 49.0,
+  "buttonHeight": 72.0,
+  "railRight": 14.0,
+  "railGap": 4.0,
+  "railBottom": 36.0,
+  "moreTop": 20.0,
+  "moreSize": 42.0,
+  "moreHeight": 66.0,
+  "longPressSeconds": 0.4,
+  "tooltipTextSize": 17.0,
+  "saveLoadItemWidth": 120.0,
+  "menuWidth": 240.0
+}

@@ -16,7 +16,6 @@
     "heroName": "ユウキ",
     "liveBadge": "LIVE",
     "noService": "圏外",
-    "receiving": "受信中",
     "rollback": "戻る",
     "log": "ログ",
     "auto": "オート",
@@ -77,6 +76,7 @@
     "resetDone": "初期設定に戻しました",
     "noSave": "セーブデータがありません",
     "noQuickSave": "クイックセーブがありません",
-    "noRollback": "これ以上は戻れません"
+    "noRollback": "これ以上は戻れません",
+    "waiting": "受信中"
   }
 }

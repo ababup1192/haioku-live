@@ -27,6 +27,7 @@
   "assets/novel.kind.json",
   "assets/novel.mixer.json",
   "assets/novel.portrait.json",
+  "assets/novel.rail.json",
   "assets/novel.story.json",
   "assets/novel.theme.json",
   "assets/talk/vocab.json",
@@ -298,7 +299,7 @@
   "h": 960
  },
  "touchGestures": {
-  "longPress": "KeyX",
+  "longPress": "ContextMenu",
   "swipeDown": "PageDown",
   "swipeLeft": "PageUp",
   "swipeUp": "PageDown"

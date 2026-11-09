@@ -1,6 +1,7 @@
 {
   "version": 1,
-  "note": "字と帯と配信の表示の色（背景の色はカメラの写真そのもの）。色は 3 つ: カメラの暗部の黒〜青灰（panel）/ LED の白い光（ink・accent）/ 配信表示の赤（live。LIVE のラベルと最後の赤いコメントと残りの少ないバッテリーだけ）。ink = 本文、inkSeen = 既読の行、accent = 選んでいる物・オートとスキップの点灯、panel = 下の帯・画面の地、chatText = コメントの本文、chatNames = コメントの名前 → 名前の色（小さく色分け）、chatName = それ以外の名前の色。",
+  "title": "字・配信の表示の色と待ちの印",
+  "note": "字と帯と配信の表示の色と、素材を待つ間の印（背景の色はカメラの写真そのもの）。色は 3 つ: カメラの暗部の黒〜青灰（panel）/ LED の白い光（ink・accent）/ 配信表示の赤（live。LIVE のラベルと最後の赤いコメントと残りの少ないバッテリーだけ）。ink = 本文、inkSeen = 既読の行、accent = 選んでいる物・オートとスキップの点灯、panel = 下の帯・画面の地、chatText = コメントの本文、chatNames = コメントの名前 → 名前の色（小さく色分け）、chatName = それ以外の名前の色、loadingMark = ブラウザ版で背景・環境音がまだ届かず黒で待つ間の印（ring = 真ん中に回る点の輪と「受信中」のラベル。字は novel.story.json の labels の waiting・dots = 右下の点 3 つの明滅・none = 黒だけ）。",
   "ink": "#eef0f2",
   "inkSeen": "#aab8c8",
   "accent": "#e8eef5",
@@ -12,5 +13,6 @@
     "ろん": "#9ad48a",
     "sasaki＠": "#c9a4e0"
   },
-  "chatName": "#9fb3c8"
+  "chatName": "#9fb3c8",
+  "loadingMark": "ring"
 }
