@@ -373,7 +373,9 @@
     "keysDoc": "assets/novel.keys.json",
     "touchGestures": {
       "longPress": "back",
-      "swipeLeft": "rollback"
+      "swipeLeft": "rollback",
+      "swipeUp": "advance",
+      "swipeDown": "advance"
     },
     "compress": {
       "lossyImages": [
