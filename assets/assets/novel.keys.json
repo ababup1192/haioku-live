@@ -67,5 +67,11 @@
   ],
   "touchHold": [
     "Menu"
+  ],
+  "flickUp": [
+    "Numpad8"
+  ],
+  "flickDown": [
+    "Numpad2"
   ]
 }

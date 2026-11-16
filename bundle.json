@@ -22,15 +22,22 @@
   "assets/bg/stairs.jpg",
   "assets/bg/stairs_down.jpg",
   "assets/novel.backdrops.json",
+  "assets/novel.cast.json",
   "assets/novel.credits.json",
+  "assets/novel.effects.json",
   "assets/novel.keys.json",
   "assets/novel.kind.json",
   "assets/novel.mixer.json",
   "assets/novel.portrait.json",
+  "assets/novel.prompts.json",
   "assets/novel.rail.json",
+  "assets/novel.shots.json",
+  "assets/novel.small.json",
   "assets/novel.story.json",
+  "assets/novel.stream.json",
   "assets/novel.theme.json",
   "assets/talk/vocab.json",
+  "assets/talk/vocab.std.json",
   "assets/walk/entrance_out.glb",
   "assets/walk/entrance_out.jpg",
   "assets/walk/gate.glb",
@@ -276,6 +283,12 @@
    "seconds": 0.04
   },
   {
+   "name": "ui_choice",
+   "path": "assets/sfx/ui_cursor.wav",
+   "looping": false,
+   "seconds": 0.04
+  },
+  {
    "name": "ui_open",
    "path": "assets/sfx/ui_open.wav",
    "looping": false,
@@ -300,9 +313,9 @@
  },
  "touchGestures": {
   "longPress": "ContextMenu",
-  "swipeDown": "PageDown",
+  "swipeDown": "Numpad2",
   "swipeLeft": "PageUp",
-  "swipeUp": "PageDown"
+  "swipeUp": "Numpad8"
  },
  "orientation": "portrait",
  "transcoded": {
@@ -388,21 +401,21 @@
   },
   {
    "path": "assets/sfx/se_creak.wav",
-   "bytes": 3887,
+   "bytes": 3899,
    "names": [
     "se_creak"
    ]
   },
   {
    "path": "assets/sfx/se_stairs_slow.wav",
-   "bytes": 20888,
+   "bytes": 20900,
    "names": [
     "se_stairs_slow"
    ]
   },
   {
    "path": "assets/sfx/se_door_heavy.wav",
-   "bytes": 21644,
+   "bytes": 21656,
    "names": [
     "se_door_heavy"
    ]
@@ -416,14 +429,14 @@
   },
   {
    "path": "assets/sfx/amb_house.wav",
-   "bytes": 104371,
+   "bytes": 104383,
    "names": [
     "amb_house"
    ]
   },
   {
    "path": "assets/sfx/bgm_suspense.wav",
-   "bytes": 688520,
+   "bytes": 688532,
    "names": [
     "bgm_suspense"
    ]
@@ -468,7 +481,7 @@
   },
   {
    "path": "assets/sfx/se_timer.wav",
-   "bytes": 25405,
+   "bytes": 25417,
    "names": [
     "se_timer"
    ]
@@ -490,14 +503,14 @@
   },
   {
    "path": "assets/sfx/se_sliding.wav",
-   "bytes": 12624,
+   "bytes": 12636,
    "names": [
     "se_sliding"
    ]
   },
   {
    "path": "assets/sfx/se_groan.wav",
-   "bytes": 13955,
+   "bytes": 13967,
    "names": [
     "se_groan"
    ]
@@ -519,7 +532,7 @@
   },
   {
    "path": "assets/sfx/se_stairs_up.wav",
-   "bytes": 17170,
+   "bytes": 17182,
    "names": [
     "se_stairs_up"
    ]
@@ -541,14 +554,14 @@
   },
   {
    "path": "assets/sfx/se_groan_far.wav",
-   "bytes": 19859,
+   "bytes": 19871,
    "names": [
     "se_groan_far"
    ]
   },
   {
    "path": "assets/sfx/se_knob.wav",
-   "bytes": 6549,
+   "bytes": 6561,
    "names": [
     "se_knob"
    ]
@@ -577,7 +590,7 @@
   },
   {
    "path": "assets/sfx/se_splash.wav",
-   "bytes": 4087,
+   "bytes": 4099,
    "names": [
     "se_splash"
    ]
@@ -598,14 +611,14 @@
   },
   {
    "path": "assets/sfx/se_run.wav",
-   "bytes": 38800,
+   "bytes": 38812,
    "names": [
     "se_run"
    ]
   },
   {
    "path": "assets/sfx/se_stairs_down.wav",
-   "bytes": 24021,
+   "bytes": 24033,
    "names": [
     "se_stairs_down"
    ]
@@ -642,21 +655,21 @@
   },
   {
    "path": "assets/sfx/se_step_heavy.wav",
-   "bytes": 5261,
+   "bytes": 5273,
    "names": [
     "se_step_heavy"
    ]
   },
   {
    "path": "assets/sfx/se_door_slam.wav",
-   "bytes": 4108,
+   "bytes": 4120,
    "names": [
     "se_door_slam"
    ]
   },
   {
    "path": "assets/sfx/se_lock.wav",
-   "bytes": 4478,
+   "bytes": 4490,
    "names": [
     "se_lock"
    ]
@@ -678,14 +691,14 @@
   },
   {
    "path": "assets/sfx/se_fusuma.wav",
-   "bytes": 30982,
+   "bytes": 30994,
    "names": [
     "se_fusuma"
    ]
   },
   {
    "path": "assets/sfx/se_futon.wav",
-   "bytes": 16068,
+   "bytes": 16080,
    "names": [
     "se_futon"
    ]
@@ -707,42 +720,42 @@
   },
   {
    "path": "assets/sfx/se_lock_rattle.wav",
-   "bytes": 20934,
+   "bytes": 20946,
    "names": [
     "se_lock_rattle"
    ]
   },
   {
    "path": "assets/sfx/se_door_slow.wav",
-   "bytes": 25406,
+   "bytes": 25418,
    "names": [
     "se_door_slow"
    ]
   },
   {
    "path": "assets/sfx/se_heartbeat.wav",
-   "bytes": 11643,
+   "bytes": 11655,
    "names": [
     "se_heartbeat"
    ]
   },
   {
    "path": "assets/sfx/se_breath.wav",
-   "bytes": 40423,
+   "bytes": 40435,
    "names": [
     "se_breath"
    ]
   },
   {
    "path": "assets/sfx/se_door_close.wav",
-   "bytes": 4311,
+   "bytes": 4323,
    "names": [
     "se_door_close"
    ]
   },
   {
    "path": "assets/sfx/se_vibrate.wav",
-   "bytes": 6544,
+   "bytes": 6556,
    "names": [
     "se_vibrate"
    ]
@@ -756,14 +769,14 @@
   },
   {
    "path": "assets/sfx/se_noise.wav",
-   "bytes": 9011,
+   "bytes": 9023,
    "names": [
     "se_noise"
    ]
   },
   {
    "path": "assets/sfx/se_scream.wav",
-   "bytes": 15797,
+   "bytes": 15809,
    "names": [
     "se_scream"
    ]

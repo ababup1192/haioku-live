@@ -4,18 +4,83 @@
   "defaultBus": "se",
   "transitionSeconds": 0.6,
   "buses": [
-    { "name": "ambience", "volume": 0.7, "lowpassGainHF": 1.0 },
-    { "name": "bgm", "volume": 0.6, "lowpassGainHF": 1.0 },
-    { "name": "se", "volume": 0.85, "lowpassGainHF": 1.0 }
+    {
+      "name": "ambience",
+      "volume": 0.7,
+      "lowpassGainHF": 1.0
+    },
+    {
+      "name": "bgm",
+      "volume": 0.6,
+      "lowpassGainHF": 1.0
+    },
+    {
+      "name": "se",
+      "volume": 0.85,
+      "lowpassGainHF": 1.0
+    }
   ],
   "routes": [
-    { "bus": "ambience", "prefixes": ["amb_"] },
-    { "bus": "bgm", "prefixes": ["bgm_"] },
-    { "bus": "se", "prefixes": ["se_", "ui_"] }
+    {
+      "bus": "ambience",
+      "prefixes": [
+        "amb_"
+      ]
+    },
+    {
+      "bus": "bgm",
+      "prefixes": [
+        "bgm_"
+      ]
+    },
+    {
+      "bus": "se",
+      "prefixes": [
+        "se_",
+        "ui_"
+      ]
+    }
   ],
   "ducks": [
-    { "bus": "ambience", "by": ["se"], "depth": 0.8, "attackSeconds": 0.05, "holdSeconds": 0.2, "releaseSeconds": 0.6 }
+    {
+      "bus": "ambience",
+      "by": [
+        "se"
+      ],
+      "depth": 0.8,
+      "attackSeconds": 0.05,
+      "holdSeconds": 0.2,
+      "releaseSeconds": 0.6
+    }
   ],
-  "cooldowns": [ { "prefix": "ui_cursor", "seconds": 0.04 }, { "prefix": "se_comment", "seconds": 0.12 } ],
-  "snapshots": [ { "name": "panel", "buses": [ { "name": "ambience", "lowpassGainHF": 0.25 }, { "name": "bgm", "lowpassGainHF": 0.3 } ] } ]
+  "cooldowns": [
+    {
+      "prefix": "ui_cursor",
+      "seconds": 0.04
+    },
+    {
+      "prefix": "se_comment",
+      "seconds": 0.12
+    }
+  ],
+  "snapshots": [
+    {
+      "name": "panel",
+      "buses": [
+        {
+          "name": "ambience",
+          "lowpassGainHF": 0.25
+        },
+        {
+          "name": "bgm",
+          "lowpassGainHF": 0.3
+        }
+      ]
+    }
+  ],
+  "volumes": {
+    "normal": 0.6,
+    "raised": 0.85
+  },
+  "lockSeconds": {}
 }

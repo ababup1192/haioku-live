@@ -281,6 +281,11 @@
       "looping": false
     },
     {
+      "name": "ui_choice",
+      "path": "assets/sfx/ui_cursor.wav",
+      "looping": false
+    },
+    {
       "name": "ui_open",
       "path": "assets/sfx/ui_open.wav",
       "looping": false
@@ -308,7 +313,7 @@
       {
         "id": "backdrops",
         "pattern": "assets/novel.backdrops.json",
-        "title": "背景の場所（カメラの映像）・怪異の重ね絵・映像の質感",
+        "title": "背景の場所（カメラの映像の写真）",
         "role": "material",
         "schema": "assets/backdrops.schema.json"
       },
@@ -329,7 +334,7 @@
       {
         "id": "kind",
         "pattern": "assets/novel.kind.json",
-        "title": "手触り（字の大きさ・オート・スキップ・コメントの間・揺れ・演出の長さ）",
+        "title": "手触り（字の大きさ・オート・スキップ・揺れ）",
         "role": "tuning",
         "schema": "assets/kind.schema.json"
       },
@@ -358,7 +363,8 @@
         "id": "mixer",
         "pattern": "assets/novel.mixer.json",
         "title": "音の通り道（環境音・BGM・効果音のバス）",
-        "role": "tuning"
+        "role": "tuning",
+        "schema": "assets/mixer.schema.json"
       },
       {
         "id": "project",
@@ -372,6 +378,41 @@
         "pattern": "assets/walk/walks.json",
         "title": "3D の場面の切り替え（カメラの道筋・音・揺れ。Blender から書き出した表）",
         "role": "material"
+      },
+      {
+        "id": "cast",
+        "pattern": "assets/novel.cast.json",
+        "title": "立ち絵と小物",
+        "role": "material",
+        "schema": "assets/cast.schema.json"
+      },
+      {
+        "id": "shots",
+        "pattern": "assets/novel.shots.json",
+        "title": "描き出しの場面（make render の SHOT とギャラリーの並び）",
+        "role": "tuning",
+        "schema": "assets/shots.schema.json"
+      },
+      {
+        "id": "effects",
+        "pattern": "assets/novel.effects.json",
+        "title": "画面の粒の演出（蛍・雪の層の数と一度だけ出す秒）",
+        "role": "tuning",
+        "schema": "assets/effects.schema.json"
+      },
+      {
+        "id": "prompts",
+        "pattern": "assets/novel.prompts.json",
+        "title": "入力の案内（払い・タップで選ぶ選択肢の矢印・絵・当たる物）",
+        "role": "material",
+        "schema": "assets/prompts.schema.json"
+      },
+      {
+        "id": "stream",
+        "pattern": "assets/novel.stream.json",
+        "title": "配信の画面（コメントの間・演出の長さ・色・カメラの質感・怪異の重ね絵・血）",
+        "role": "tuning",
+        "schema": "assets/stream.schema.json"
       }
     ]
   },
@@ -381,8 +422,8 @@
     "touchGestures": {
       "longPress": "touchHold",
       "swipeLeft": "rollback",
-      "swipeUp": "advance",
-      "swipeDown": "advance"
+      "swipeUp": "flickUp",
+      "swipeDown": "flickDown"
     },
     "compress": {
       "lossyImages": [

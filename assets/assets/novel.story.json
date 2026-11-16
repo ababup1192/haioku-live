@@ -1,11 +1,20 @@
 {
   "version": 1,
-  "note": "シナリオの外で画面に出す言葉（タイトル・クイックメニュー・設定・セーブとロード・バックログ・確認のウィンドウ・知らせ）と、主人公の名前（labels の heroName。台本の ×××× に入る）。文章はシナリオ assets/talk/haioku.yarn（直したら bin/fge yarn build assets/talk）。labels の鍵は src/StoryDoc.flix の Label。titlePlace は novel.backdrops.json の places の鍵、titleAmbience はタイトル画面で鳴り続ける音（project.json の sounds の名前）。",
+  "note": "シナリオの外で画面に出す言葉（タイトル・クイックメニュー・設定・セーブとロード・バックログ・確認のウィンドウ・知らせ）と、話し手の呼び名。文章・分岐・結末はシナリオ assets/talk/yukidoke.yarn（直したら bin/fge yarn build assets/talk）。labels の鍵は src/StoryDoc.flix の Label。names の鍵はシナリオの話し手、vars の鍵はシナリオの変数（$ を付けない名前）で、値は人に見せる名前。opening は「はじめから」で開くノード。話し手・変数・opening は bin/fge yarn build が assets/talk/vocab.json の from を通してここから読み、台本の名前と照らす。titlePhoto / titleGrade は novel.backdrops.json の写真と時間帯、titleAmbience は環境音 amb_<名前>。",
   "title": "廃屋配信",
-  "titlePlace": "gate",
-  "titleAmbience": [
-    "amb_wind"
-  ],
+  "subtitle": "",
+  "titlePhoto": "gate",
+  "titleGrade": "camera",
+  "titleAmbience": "amb_wind",
+  "opening": "Gate",
+  "names": {
+    "hero": ""
+  },
+  "vars": {
+    "battery": "バッテリーの残り（%）",
+    "viewers": "視聴者数",
+    "signal": "回線と電波の棒"
+  },
   "labels": {
     "newGame": "はじめから",
     "continue": "つづきから",
@@ -13,9 +22,6 @@
     "settings": "設定",
     "credits": "クレジット",
     "quit": "終了",
-    "heroName": "ユウキ",
-    "liveBadge": "LIVE",
-    "noService": "圏外",
     "rollback": "戻る",
     "log": "ログ",
     "auto": "オート",
@@ -28,6 +34,8 @@
     "hide": "隠す",
     "toTitle": "タイトルへ",
     "menu": "メニュー",
+    "saveLoad": "しおり",
+    "backToTitle": "タイトルへ",
     "saveTitle": "セーブ",
     "loadTitle": "ロード",
     "logTitle": "バックログ",
@@ -54,7 +62,6 @@
     "fullscreenMode": "フルスクリーン",
     "masterVolume": "全体の音量",
     "ambienceVolume": "環境音",
-    "musicVolume": "BGM",
     "seVolume": "効果音",
     "windowAlpha": "ウィンドウの濃さ",
     "reset": "初期設定に戻す",
@@ -77,6 +84,15 @@
     "noSave": "セーブデータがありません",
     "noQuickSave": "クイックセーブがありません",
     "noRollback": "これ以上は戻れません",
-    "waiting": "受信中"
+    "noSaveNow": "今はセーブできません",
+    "savesRefused": "前の版のセーブはこの版では読めません",
+    "savesRefusedKept": "前の版のセーブはこの版では読めません（saves/ に別の名前で残しました）",
+    "waiting": "受信中",
+    "scriptEdited": "直した台本で遊んでいます",
+    "scriptEditsSkipped": "台本が変わっていたので直しを当てていません",
+    "musicVolume": "BGM"
+  },
+  "replace": {
+    "××××": "ユウキ"
   }
 }

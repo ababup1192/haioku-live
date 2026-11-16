@@ -1,6 +1,132 @@
 {
-  "speakers": ["hero"],
-  "nodes": ["Gate"],
-  "tags": {},
-  "commands": ["bg", "feed", "viewers", "signal", "battery", "comment", "comment_red", "comment_clear", "se", "ambience", "bgm", "silence", "apparition", "blood", "vibrate", "crash"]
+  "commands": {
+    "apparition": {
+      "params": [
+        {
+          "name": "overlay",
+          "pos": 1,
+          "ref": {
+            "from": [
+              {
+                "doc": "../novel.stream.json",
+                "keys": "overlays"
+              }
+            ]
+          },
+          "req": true,
+          "type": "name"
+        }
+      ],
+      "summary": "怪異が 1 秒ほど映る（重ね絵は novel.stream.json の overlays）"
+    },
+    "blood": {
+      "params": [],
+      "summary": "画面の上から血がゆっくり垂れ、流れ終わると元の背景に戻る（長さは novel.stream.json の bloodSeconds）"
+    },
+    "crash": {
+      "params": [],
+      "summary": "画面が激しく揺れ、砂嵐と横の筋のずれが走る（揺れは novel.kind.json の shakes の crash・長さは novel.stream.json の crashSeconds）"
+    },
+    "feed": {
+      "params": [
+        {
+          "name": "text",
+          "pos": 1,
+          "req": true,
+          "type": "text"
+        },
+        {
+          "name": "from",
+          "type": "text"
+        },
+        {
+          "name": "tone",
+          "type": "choice",
+          "values": [
+            "plain",
+            "red"
+          ]
+        }
+      ],
+      "summary": "コメント欄に 1 件流して commentInterval だけ待つ（from = 名前・tone = red で赤い字）"
+    },
+    "feed_clear": {
+      "params": [],
+      "summary": "コメント欄を空にする"
+    },
+    "stream": {
+      "params": [
+        {
+          "name": "state",
+          "pos": 1,
+          "req": true,
+          "type": "choice",
+          "values": [
+            "live",
+            "lost"
+          ]
+        }
+      ],
+      "summary": "配信を始める（live。LIVE と経過時間を出す）・配信が切れる（lost。上の表示とコメント欄が消える）"
+    }
+  },
+  "nodeRefs": {
+    "from": [
+      {
+        "doc": "../novel.shots.json",
+        "path": "shots[].node"
+      }
+    ]
+  },
+  "nodes": {
+    "from": [
+      {
+        "doc": "../novel.story.json",
+        "path": "opening"
+      }
+    ]
+  },
+  "speakers": {
+    "from": [
+      {
+        "doc": "../novel.story.json",
+        "keys": "names"
+      }
+    ]
+  },
+  "tags": {
+    "act": [
+      "up",
+      "down",
+      "left",
+      "right",
+      "tap"
+    ],
+    "at": {
+      "from": [
+        {
+          "doc": "../novel.prompts.json",
+          "keys": "targets"
+        }
+      ]
+    },
+    "icon": {
+      "from": [
+        {
+          "doc": "../novel.prompts.json",
+          "keys": "icons"
+        }
+      ]
+    },
+    "mute": []
+  },
+  "vars": {
+    "from": [
+      {
+        "doc": "../novel.story.json",
+        "keys": "vars"
+      }
+    ]
+  },
+  "version": 2
 }

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "title": "配信の画面の数と色",
+  "note": "配信の画面（このゲームだけの物）の数と色。commentInterval = コメントの間の秒（<<feed>> を続けて書くとこの間を空けて流れ、後ろの台詞は最後のコメントの後にこの間を置いて出る）、chatMax = コメント欄に残す数、chatFadeIn = コメントが現れる秒、phoneClockStart = 配信を始めた時のスマホの時刻（0 時からの分）、apparitionSeconds / bloodSeconds / crashSeconds = 怪異・血・最後の乱れの長さ、colors = 配信の表示の赤（live）とコメントの字と名前の色、camera = カメラの質感（grain = ざらつき・vignette = 四隅の落ち・light / lightRadius = ライトの丸い光の外の沈みと半径・swayPx = 手持ちの揺れ・lightSway = 光の揺れ・bleed = 揺れの分だけ広げる px）、exposure = 場所ごとの明るさ（書かない場所は 1）、overlays = 怪異の重ね絵、blood = 血の垂れの絵（color = 色・key = 濃さと届く時刻）、labels = 配信の表示の字（liveBadge = LIVE のラベル・noService = 圏外）。配信者の名前は novel.story.json の replace の ××××。",
+  "commentInterval": 0.65,
+  "chatMax": 7,
+  "chatFadeIn": 0.25,
+  "phoneClockStart": 1421.0,
+  "apparitionSeconds": 1.1,
+  "bloodSeconds": 6.5,
+  "crashSeconds": 1.8,
+  "colors": {
+    "live": "#e0302a",
+    "chatText": "#f4f6f8",
+    "chatName": "#9fb3c8",
+    "chatNames": {
+      "ポi": "#7fc8e8",
+      "ろん": "#9ad48a",
+      "sasaki＠": "#c9a4e0"
+    }
+  },
+  "camera": {
+    "grain": 0.07,
+    "vignette": 0.6,
+    "light": 0.35,
+    "lightRadius": 0.55,
+    "swayPx": 6.0,
+    "lightSway": 0.03,
+    "bleed": 24.0
+  },
+  "exposure": {
+    "oshiire": 1.6
+  },
+  "overlays": {
+    "kaii_window": {
+      "texture": "kaii_window",
+      "x": 0.64,
+      "y": 0.2,
+      "h": 0.37,
+      "pixelWidth": 68,
+      "pixelHeight": 388,
+      "alpha": 0.75
+    },
+    "kaii_gap": {
+      "texture": "kaii_gap",
+      "x": 0.355,
+      "y": 0.0,
+      "h": 1.0,
+      "pixelWidth": 146,
+      "pixelHeight": 1046,
+      "alpha": 0.6
+    }
+  },
+  "blood": {
+    "color": "blood_color",
+    "key": "blood_key"
+  },
+  "labels": {
+    "liveBadge": "LIVE",
+    "noService": "圏外"
+  }
+}

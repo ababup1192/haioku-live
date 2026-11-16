@@ -18,5 +18,7 @@
   "settingTextSize": 20.0,
   "settingRowHeight": 66.0,
   "askButtonTextSize": 22.0,
-  "askButtonHeight": 66.0
+  "askButtonHeight": 66.0,
+  "nameSize": 16.0,
+  "pageBottom": 196.0
 }

@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "title": "描き出しの場面",
+  "note": "make render SHOT=<name> と make render-all（gallery/<name>.png）の場面と並び。実機でも START=shot:<name> で同じ World から開く。node = 開くノード、say = そのノードの何番目（0 から）の台詞を出し終えた所、until: \"choices\" = 選択肢が出るまで送った所（どちらも無ければノードの頭）。vars = シナリオの変数（$ を付けない名前 → 値）。open = 開く画面（title・log・save・load・settings・ask・credits・hold）。pointer = マウスの位置（design px）。at = 時計を据える秒。縦の画面・小さい画面・Doc を差し替える場面は src/render/SceneRender.flix がここの名前を引いて作る。node は bin/fge yarn build がシナリオにあるかを見る。",
+  "shots": [
+    {
+      "name": "title",
+      "open": "title",
+      "at": 3.0
+    },
+    {
+      "name": "gate",
+      "node": "Gate",
+      "say": 3,
+      "at": 600.0
+    },
+    {
+      "name": "hall",
+      "node": "Inside",
+      "say": 10,
+      "at": 600.0
+    },
+    {
+      "name": "hold",
+      "node": "Gate",
+      "say": 3,
+      "open": "hold",
+      "at": 600.0
+    },
+    {
+      "name": "endless",
+      "node": "Escape",
+      "say": 2,
+      "at": 600.0
+    },
+    {
+      "name": "oshiire",
+      "node": "Closet",
+      "say": 15,
+      "at": 600.0
+    },
+    {
+      "name": "log",
+      "open": "log",
+      "pointer": [
+        270.0,
+        300.0
+      ],
+      "at": 4.0
+    },
+    {
+      "name": "save",
+      "node": "Upstairs",
+      "say": 3,
+      "open": "save",
+      "at": 4.0
+    },
+    {
+      "name": "load",
+      "open": "load",
+      "at": 4.0
+    },
+    {
+      "name": "settings",
+      "node": "Inside",
+      "say": 3,
+      "open": "settings",
+      "at": 1.2
+    },
+    {
+      "name": "ask",
+      "node": "Entrance",
+      "say": 1,
+      "open": "ask",
+      "at": 4.0
+    },
+    {
+      "name": "credits",
+      "open": "credits",
+      "at": 12.0
+    }
+  ],
+  "slots": [
+    {
+      "node": "Gate",
+      "say": 3
+    },
+    {
+      "node": "Inside",
+      "say": 10
+    },
+    {
+      "node": "Upstairs",
+      "say": 7
+    }
+  ]
+}
