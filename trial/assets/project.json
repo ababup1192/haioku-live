@@ -741,6 +741,10 @@
       "assets/sfx/se_siren_loop.wav",
       "assets/sfx/se_scream.wav",
       "assets/cast/endcard_on.png"
+    ],
+    "deferredFonts": [
+      "gothic",
+      "gothic_bold"
     ]
   },
   "// sounds": "音の名前 → ファイルの対応はここ 1 か所（名前 = ファイル名の茎）。拡張子を替える時は make sfx-ext EXT=ogg（Makefile）。鳴り続ける音（amb_・bgm_・心音と呼吸）は looping。"

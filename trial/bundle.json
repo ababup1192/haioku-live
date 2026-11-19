@@ -575,6 +575,20 @@
  },
  "deferred": [
   {
+   "path": "font-atlas/gothic.fontatlas",
+   "bytes": 897088,
+   "names": [
+    "gothic"
+   ]
+  },
+  {
+   "path": "font-atlas/gothic_bold.fontatlas",
+   "bytes": 923360,
+   "names": [
+    "gothic_bold"
+   ]
+  },
+  {
    "path": "assets/bg/entrance_out.jpg",
    "bytes": 63464,
    "names": [
@@ -1240,10 +1254,11 @@
    "maxHeight": 1296
   }
  },
+ "wasmBrotli": "classes.wasm.br",
  "boot": {
-  "assets": 3464988,
-  "assetsWire": 2955442,
-  "wasm": 11546902,
-  "wasmWire": 3013658
+  "assets": 1644606,
+  "assetsWire": 1238885,
+  "wasm": 1685390,
+  "wasmWire": 1753661
  }
 }
