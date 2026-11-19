@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "title": "廃屋配信",
+  "title": "廃☆怪ちゃんねる",
   "designWidth": 540,
-  "designHeight": 960,
-  "windowWidth": 540,
-  "windowHeight": 960,
+  "designHeight": 1170,
+  "windowWidth": 360,
+  "windowHeight": 780,
   "clearColor": {
     "r": 0.02,
     "g": 0.025,
@@ -97,6 +97,91 @@
       "name": "blood_key",
       "path": "assets/bg/blood_key.png",
       "hasAlpha": false
+    },
+    {
+      "name": "bg_living2",
+      "path": "assets/bg/living2.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_living2_granny",
+      "path": "assets/bg/living2_granny.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_portrait",
+      "path": "assets/bg/portrait.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_omamori",
+      "path": "assets/bg/omamori.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_kitchen2",
+      "path": "assets/bg/kitchen2.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_okimono",
+      "path": "assets/bg/okimono.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_knife",
+      "path": "assets/bg/knife.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_room2",
+      "path": "assets/bg/room2.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_room2_blood",
+      "path": "assets/bg/room2_blood.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_oshiire_in",
+      "path": "assets/bg/oshiire_in.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_oshiire_eye",
+      "path": "assets/bg/oshiire_eye.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_hall_door",
+      "path": "assets/bg/hall_door.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_yard_up",
+      "path": "assets/bg/yard_up.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "bg_floor_drop",
+      "path": "assets/bg/floor_drop.jpg",
+      "hasAlpha": false
+    },
+    {
+      "name": "cast_mist_on",
+      "path": "assets/cast/mist_on.png",
+      "hasAlpha": true
+    },
+    {
+      "name": "cast_red_edge_on",
+      "path": "assets/cast/red_edge_on.png",
+      "hasAlpha": true
+    },
+    {
+      "name": "cast_endcard_on",
+      "path": "assets/cast/endcard_on.png",
+      "hasAlpha": true
     }
   ],
   "// glyphs": "起動時に焼く字。used = ソースとアセットにある字を先に焼く（シナリオの字がそろってからタイトル画面が出る）",
@@ -299,6 +384,111 @@
       "name": "ui_page",
       "path": "assets/sfx/ui_page.wav",
       "looping": false
+    },
+    {
+      "name": "se_gust",
+      "path": "assets/sfx/se_gust.wav",
+      "looping": false
+    },
+    {
+      "name": "se_chiin",
+      "path": "assets/sfx/se_chiin.wav",
+      "looping": false
+    },
+    {
+      "name": "se_kaan",
+      "path": "assets/sfx/se_kaan.wav",
+      "looping": false
+    },
+    {
+      "name": "se_gucha",
+      "path": "assets/sfx/se_gucha.wav",
+      "looping": false
+    },
+    {
+      "name": "se_thud",
+      "path": "assets/sfx/se_thud.wav",
+      "looping": false
+    },
+    {
+      "name": "se_bowl",
+      "path": "assets/sfx/se_bowl.wav",
+      "looping": false
+    },
+    {
+      "name": "se_knife",
+      "path": "assets/sfx/se_knife.wav",
+      "looping": false
+    },
+    {
+      "name": "se_slash",
+      "path": "assets/sfx/se_slash.wav",
+      "looping": false
+    },
+    {
+      "name": "se_karan",
+      "path": "assets/sfx/se_karan.wav",
+      "looping": false
+    },
+    {
+      "name": "se_glass",
+      "path": "assets/sfx/se_glass.wav",
+      "looping": false
+    },
+    {
+      "name": "se_drag",
+      "path": "assets/sfx/se_drag.wav",
+      "looping": false
+    },
+    {
+      "name": "se_nucha",
+      "path": "assets/sfx/se_nucha.wav",
+      "looping": false
+    },
+    {
+      "name": "se_gan",
+      "path": "assets/sfx/se_gan.wav",
+      "looping": false
+    },
+    {
+      "name": "se_kiii",
+      "path": "assets/sfx/se_kiii.wav",
+      "looping": false
+    },
+    {
+      "name": "se_guju",
+      "path": "assets/sfx/se_guju.wav",
+      "looping": false
+    },
+    {
+      "name": "se_knee",
+      "path": "assets/sfx/se_knee.wav",
+      "looping": false
+    },
+    {
+      "name": "se_tinnitus",
+      "path": "assets/sfx/se_tinnitus.wav",
+      "looping": false
+    },
+    {
+      "name": "se_siren",
+      "path": "assets/sfx/se_siren.wav",
+      "looping": false
+    },
+    {
+      "name": "se_siren_loop",
+      "path": "assets/sfx/se_siren_loop.wav",
+      "looping": true
+    },
+    {
+      "name": "se_heart1",
+      "path": "assets/sfx/se_heart1.wav",
+      "looping": false
+    },
+    {
+      "name": "se_breath_pass",
+      "path": "assets/sfx/se_breath_pass.wav",
+      "looping": false
     }
   ],
   "editor": {
@@ -445,7 +635,7 @@
       "width": 540,
       "minHeight": 960
     },
-    "// deferred": "押して始めた後に裏で取る素材（シナリオで出てくる順。届いた順に使える）。タイトルの写真（gate）と環境音（amb_wind）、門の前で鳴る音（se_cloth・se_gate・コメントの着信音 se_comment）と返事の音（ui_*）は起動時に取る。届く前に使う所は暗転で待つ（背景・環境音・BGM）か、鳴らさずに進む（一発の音）。3D の部屋は待たずに 2D の切り替えで進む。",
+    "// deferred": "押して始めた後に裏で取る素材（シナリオで出てくる順。届いた順に使える）。タイトルの写真（gate）と環境音（amb_wind）、門の前で鳴る音（se_cloth・se_gate・風の se_gust・コメントの着信音 se_comment）と返事の音（ui_*）、演出の絵（cast/*）は起動時に取る。届く前に使う所は暗転で待つ（背景・環境音・BGM）か、鳴らさずに進む（一発の音）。3D の部屋は待たずに 2D の切り替えで進む。",
     "deferred": [
       "assets/bg/entrance_out.jpg",
       "assets/walk/gate.glb",
@@ -509,13 +699,53 @@
       "assets/walk/oshiire.jpg",
       "assets/sfx/se_lock_rattle.wav",
       "assets/sfx/se_door_slow.wav",
+      "assets/bg/living2.jpg",
+      "assets/bg/portrait.jpg",
+      "assets/bg/living2_granny.jpg",
+      "assets/sfx/se_gucha.wav",
+      "assets/sfx/se_thud.wav",
+      "assets/sfx/se_chiin.wav",
+      "assets/sfx/se_heart1.wav",
+      "assets/bg/omamori.jpg",
+      "assets/sfx/se_bowl.wav",
+      "assets/bg/kitchen2.jpg",
+      "assets/bg/okimono.jpg",
+      "assets/bg/knife.jpg",
+      "assets/sfx/se_knife.wav",
       "assets/sfx/se_heartbeat.wav",
+      "assets/sfx/se_tinnitus.wav",
+      "assets/bg/room2.jpg",
+      "assets/bg/oshiire_in.jpg",
+      "assets/bg/room2_blood.jpg",
+      "assets/sfx/se_kaan.wav",
       "assets/sfx/se_breath.wav",
+      "assets/sfx/se_slash.wav",
+      "assets/sfx/se_karan.wav",
       "assets/sfx/se_door_close.wav",
       "assets/sfx/se_vibrate.wav",
       "assets/bg/kaii_gap.png",
       "assets/sfx/se_noise.wav",
-      "assets/sfx/se_scream.wav"
+      "assets/bg/floor_drop.jpg",
+      "assets/sfx/se_drag.wav",
+      "assets/sfx/se_glass.wav",
+      "assets/bg/yard_up.jpg",
+      "assets/sfx/se_breath_pass.wav",
+      "assets/sfx/se_nucha.wav",
+      "assets/bg/oshiire_eye.jpg",
+      "assets/sfx/se_gan.wav",
+      "assets/sfx/se_kiii.wav",
+      "assets/sfx/se_guju.wav",
+      "assets/bg/hall_door.jpg",
+      "assets/sfx/se_knee.wav",
+      "assets/sfx/se_siren.wav",
+      "assets/sfx/se_siren_loop.wav",
+      "assets/sfx/se_scream.wav",
+      "assets/cast/endcard_on.png"
+    ],
+    "// deferredFonts": "押して始めた後に取るフォント。タイトルは明朝（default）だけで出すので、配信の表示とコメント欄のゴシック体 2 本は後で取る。届くまでは明朝で出し、はじめからで届いていなければ暗転で待つ（WorldRead.deferredFonts）。",
+    "deferredFonts": [
+      "gothic",
+      "gothic_bold"
     ]
   },
   "// sounds": "音の名前 → ファイルの対応はここ 1 か所（名前 = ファイル名の茎）。拡張子を替える時は make sfx-ext EXT=ogg（Makefile）。鳴り続ける音（amb_・bgm_・心音と呼吸）は looping。"

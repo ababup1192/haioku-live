@@ -7,22 +7,22 @@
     "gate": {
       "texture": "bg_gate",
       "label": "門の前",
-      "aspect": 0.5625
+      "aspect": 0.4615
     },
     "entrance_out": {
       "texture": "bg_entrance_out",
       "label": "玄関の前",
-      "aspect": 0.5625
+      "aspect": 0.4615
     },
     "genkan": {
       "texture": "bg_genkan",
       "label": "玄関",
-      "aspect": 0.5625
+      "aspect": 0.4615
     },
     "hall1": {
       "texture": "bg_hall1",
       "label": "一階の廊下",
-      "aspect": 0.5625
+      "aspect": 0.4615
     },
     "living": {
       "texture": "bg_living",
@@ -37,17 +37,17 @@
     "stairs": {
       "texture": "bg_stairs",
       "label": "階段",
-      "aspect": 0.5625
+      "aspect": 0.4615
     },
     "stairs_down": {
       "texture": "bg_stairs_down",
       "label": "階段（下り）",
-      "aspect": 0.5625
+      "aspect": 0.4615
     },
     "hall2": {
       "texture": "bg_hall2",
       "label": "二階の廊下",
-      "aspect": 0.5625
+      "aspect": 0.4615
     },
     "room1": {
       "texture": "bg_room1",
@@ -67,12 +67,82 @@
     "hall_endless": {
       "texture": "bg_hall_endless",
       "label": "終わらない廊下",
-      "aspect": 0.5625
+      "aspect": 0.4615
     },
     "black": {
       "texture": "",
       "label": "暗闇",
       "blank": true
+    },
+    "living2": {
+      "texture": "bg_living2",
+      "label": "居間（仏壇のある部屋）",
+      "aspect": 0.4615
+    },
+    "living2_granny": {
+      "texture": "bg_living2_granny",
+      "label": "居間に立つ老婆",
+      "aspect": 0.4615
+    },
+    "portrait": {
+      "texture": "bg_portrait",
+      "label": "仏壇の遺影",
+      "aspect": 0.4615
+    },
+    "omamori": {
+      "texture": "bg_omamori",
+      "label": "手の中のお守り袋",
+      "aspect": 0.4615
+    },
+    "kitchen2": {
+      "texture": "bg_kitchen2",
+      "label": "台所",
+      "aspect": 0.4615
+    },
+    "okimono": {
+      "texture": "bg_okimono",
+      "label": "金属製の置物",
+      "aspect": 0.4615
+    },
+    "knife": {
+      "texture": "bg_knife",
+      "label": "血の付いた包丁",
+      "aspect": 0.4615
+    },
+    "room2": {
+      "texture": "bg_room2",
+      "label": "二階の部屋",
+      "aspect": 0.4615
+    },
+    "room2_blood": {
+      "texture": "bg_room2_blood",
+      "label": "二階の部屋の血だまり",
+      "aspect": 0.4615
+    },
+    "oshiire_in": {
+      "texture": "bg_oshiire_in",
+      "label": "押し入れの中（襖の隙間）",
+      "aspect": 0.4615
+    },
+    "oshiire_eye": {
+      "texture": "bg_oshiire_eye",
+      "label": "襖の隙間から覗く目",
+      "aspect": 0.4615
+    },
+    "hall_door": {
+      "texture": "bg_hall_door",
+      "label": "玄関の見える廊下",
+      "aspect": 0.4615
+    },
+    "yard_up": {
+      "texture": "bg_yard_up",
+      "label": "庭から見上げた二階の窓",
+      "aspect": 0.4615
+    },
+    "floor_drop": {
+      "texture": "bg_floor_drop",
+      "label": "床に落ちたスマホの画面",
+      "aspect": 0.4615
     }
   },
   "grades": {

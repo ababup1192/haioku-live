@@ -8,7 +8,8 @@
   "transition": "keys run in the 'from' scene starting at t=0 (first key = where the camera rests after the previous arrival). Fade to black over fade.start..fade.end (end = last key). Then switch to the 'to' scene and play arrive.keys with fade-in over arrive.fadeIn. The last arrive key is where the camera rests until the next transition.",
   "fovY": "vertical field of view in degrees for a 9:16 portrait view",
   "mood": "creep = slow cautious walk (small bob, stronger hand shake); chase = running (big bob/sway/roll, heavy motion blur, darker). transition.mood applies to keys; arrive.mood to arrive.keys. Pick shake.byMood[mood].",
-  "sounds": "t in seconds from the start of its part ('out' = keys, 'arrive' = arrive.keys; with repeat, replay the arrive sounds on every repeat). Names are entries of project.json sounds; the same sound may overlap itself."
+  "sounds": "t in seconds from the start of its part ('out' = keys, 'arrive' = arrive.keys; with repeat, replay the arrive sounds on every repeat). Names are entries of project.json sounds; the same sound may overlap itself.",
+  "photoView": "optional per scene: a camera (engine axes, yaw/pitch degrees) whose 3D view lines up with the current 2D photo (assets/bg). The game ends arrivals into that scene at this camera and starts walks out of it from this camera, and dissolves 3D <-> photo there instead of dipping to black."
  },
  "shake": {
   "byMood": {
@@ -234,7 +235,16 @@
      -0.09082
     ]
    },
-   "safeForward": 1.2
+   "safeForward": 1.2,
+   "photoView": {
+    "pos": [
+     -0.0984,
+     1.3,
+     1.9969
+    ],
+    "yaw": 2.954,
+    "pitch": -2.469
+   }
   },
   "living": {
    "glb": "glb/living.glb",
@@ -414,7 +424,16 @@
      0.0
     ]
    },
-   "safeForward": 1.5
+   "safeForward": 1.5,
+   "photoView": {
+    "pos": [
+     0.0422,
+     1.3,
+     2.1406
+    ],
+    "yaw": -0.0625,
+    "pitch": 3.625
+   }
   },
   "kitchen": {
    "glb": "glb/kitchen.glb",

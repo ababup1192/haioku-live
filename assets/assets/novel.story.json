@@ -1,7 +1,7 @@
 {
   "version": 1,
   "note": "シナリオの外で画面に出す言葉（タイトル・クイックメニュー・設定・セーブとロード・バックログ・確認のウィンドウ・知らせ）と、話し手の呼び名。文章・分岐・結末はシナリオ assets/talk/yukidoke.yarn（直したら bin/fge yarn build assets/talk）。labels の鍵は src/StoryDoc.flix の Label。names の鍵はシナリオの話し手、vars の鍵はシナリオの変数（$ を付けない名前）で、値は人に見せる名前。opening は「はじめから」で開くノード。話し手・変数・opening は bin/fge yarn build が assets/talk/vocab.json の from を通してここから読み、台本の名前と照らす。titlePhoto / titleGrade は novel.backdrops.json の写真と時間帯、titleAmbience は環境音 amb_<名前>。",
-  "title": "廃屋配信",
+  "title": "廃☆怪ちゃんねる",
   "subtitle": "",
   "titlePhoto": "gate",
   "titleGrade": "camera",
@@ -13,7 +13,21 @@
   "vars": {
     "battery": "バッテリーの残り（%）",
     "viewers": "視聴者数",
-    "signal": "回線と電波の棒"
+    "signal": "回線と電波の棒",
+    "butsugu": "仏具を持っている",
+    "omamori": "お守りを持っている",
+    "okimono": "置物を持っている",
+    "seen_liv_tv": "見た: テレビ",
+    "seen_liv_desk": "見た: 居間の机",
+    "seen_liv_lamp": "見た: 居間の電灯",
+    "seen_liv_altar": "見た: 仏壇",
+    "seen_kit_stove": "見た: コンロ",
+    "seen_kit_fridge": "見た: 冷蔵庫",
+    "seen_kit_desk": "見た: 台所の机",
+    "seen_kit_counter": "見た: 調理台",
+    "seen_room_tatami": "見た: 畳",
+    "seen_room_lamp": "見た: 二階の電灯",
+    "seen_room_closet": "見た: 押し入れ"
   },
   "labels": {
     "newGame": "はじめから",
@@ -93,6 +107,6 @@
     "musicVolume": "BGM"
   },
   "replace": {
-    "××××": "ユウキ"
+    "××××": "廃☆怪ちゃんねる"
   }
 }

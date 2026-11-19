@@ -29,15 +29,60 @@
     },
     {
       "name": "endless",
-      "node": "Escape",
+      "node": "Endless",
       "say": 2,
       "at": 600.0
     },
     {
       "name": "oshiire",
-      "node": "Closet",
-      "say": 15,
+      "node": "CallAlone",
+      "say": 8,
       "at": 600.0
+    },
+    {
+      "name": "living-search",
+      "node": "LivingSearch",
+      "until": "choices",
+      "at": 600.0
+    },
+    {
+      "name": "kitchen-search",
+      "node": "KitchenSearch",
+      "until": "choices",
+      "vars": {
+        "seen_kit_stove": true
+      },
+      "at": 600.0
+    },
+    {
+      "name": "room-search",
+      "node": "RoomSearch",
+      "until": "choices",
+      "at": 600.0
+    },
+    {
+      "name": "altar-choice",
+      "node": "LivingAltar",
+      "until": "choices",
+      "at": 600.0
+    },
+    {
+      "name": "granny",
+      "node": "TakeNothing",
+      "say": 8,
+      "at": 600.0
+    },
+    {
+      "name": "knife-red",
+      "node": "TouchKnife",
+      "say": 20,
+      "at": 600.0
+    },
+    {
+      "name": "bad-end",
+      "node": "TakeIncense",
+      "at": 600.0,
+      "say": 31
     },
     {
       "name": "log",

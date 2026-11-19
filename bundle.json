@@ -1,26 +1,43 @@
 {
  "id": "haioku",
- "title": "廃屋配信",
+ "title": "廃☆怪ちゃんねる",
  "files": [
   "assets/OFL-MPLUS1p.txt",
   "assets/OFL.txt",
   "assets/bg/blood_color.jpg",
   "assets/bg/blood_key.png",
   "assets/bg/entrance_out.jpg",
+  "assets/bg/floor_drop.jpg",
   "assets/bg/gate.jpg",
   "assets/bg/genkan.jpg",
   "assets/bg/hall1.jpg",
   "assets/bg/hall2.jpg",
+  "assets/bg/hall_door.jpg",
   "assets/bg/hall_endless.jpg",
   "assets/bg/kaii_gap.png",
   "assets/bg/kaii_window.png",
   "assets/bg/kitchen.jpg",
+  "assets/bg/kitchen2.jpg",
+  "assets/bg/knife.jpg",
   "assets/bg/living.jpg",
+  "assets/bg/living2.jpg",
+  "assets/bg/living2_granny.jpg",
+  "assets/bg/okimono.jpg",
+  "assets/bg/omamori.jpg",
   "assets/bg/oshiire.jpg",
+  "assets/bg/oshiire_eye.jpg",
+  "assets/bg/oshiire_in.jpg",
+  "assets/bg/portrait.jpg",
   "assets/bg/room1.jpg",
+  "assets/bg/room2.jpg",
+  "assets/bg/room2_blood.jpg",
   "assets/bg/room_back.jpg",
   "assets/bg/stairs.jpg",
   "assets/bg/stairs_down.jpg",
+  "assets/bg/yard_up.jpg",
+  "assets/cast/endcard_on.png",
+  "assets/cast/mist_on.png",
+  "assets/cast/red_edge_on.png",
   "assets/novel.backdrops.json",
   "assets/novel.cast.json",
   "assets/novel.credits.json",
@@ -87,7 +104,24 @@
   "assets/bg/kaii_window.png",
   "assets/bg/kaii_gap.png",
   "assets/bg/blood_color.jpg",
-  "assets/bg/blood_key.png"
+  "assets/bg/blood_key.png",
+  "assets/bg/living2.jpg",
+  "assets/bg/living2_granny.jpg",
+  "assets/bg/portrait.jpg",
+  "assets/bg/omamori.jpg",
+  "assets/bg/kitchen2.jpg",
+  "assets/bg/okimono.jpg",
+  "assets/bg/knife.jpg",
+  "assets/bg/room2.jpg",
+  "assets/bg/room2_blood.jpg",
+  "assets/bg/oshiire_in.jpg",
+  "assets/bg/oshiire_eye.jpg",
+  "assets/bg/hall_door.jpg",
+  "assets/bg/yard_up.jpg",
+  "assets/bg/floor_drop.jpg",
+  "assets/cast/mist_on.png",
+  "assets/cast/red_edge_on.png",
+  "assets/cast/endcard_on.png"
  ],
  "sounds": [
   {
@@ -305,11 +339,137 @@
    "path": "assets/sfx/ui_page.wav",
    "looping": false,
    "seconds": 0.14
+  },
+  {
+   "name": "se_gust",
+   "path": "assets/sfx/se_gust.wav",
+   "looping": false,
+   "seconds": 2.6
+  },
+  {
+   "name": "se_chiin",
+   "path": "assets/sfx/se_chiin.wav",
+   "looping": false,
+   "seconds": 5.120952380952381
+  },
+  {
+   "name": "se_kaan",
+   "path": "assets/sfx/se_kaan.wav",
+   "looping": false,
+   "seconds": 3.9803174603174605
+  },
+  {
+   "name": "se_gucha",
+   "path": "assets/sfx/se_gucha.wav",
+   "looping": false,
+   "seconds": 0.5503125
+  },
+  {
+   "name": "se_thud",
+   "path": "assets/sfx/se_thud.wav",
+   "looping": false,
+   "seconds": 0.56284375
+  },
+  {
+   "name": "se_bowl",
+   "path": "assets/sfx/se_bowl.wav",
+   "looping": false,
+   "seconds": 3.423560090702948
+  },
+  {
+   "name": "se_knife",
+   "path": "assets/sfx/se_knife.wav",
+   "looping": false,
+   "seconds": 1.1692290249433106
+  },
+  {
+   "name": "se_slash",
+   "path": "assets/sfx/se_slash.wav",
+   "looping": false,
+   "seconds": 0.56284375
+  },
+  {
+   "name": "se_karan",
+   "path": "assets/sfx/se_karan.wav",
+   "looping": false,
+   "seconds": 0.84
+  },
+  {
+   "name": "se_glass",
+   "path": "assets/sfx/se_glass.wav",
+   "looping": false,
+   "seconds": 1.2597505668934241
+  },
+  {
+   "name": "se_drag",
+   "path": "assets/sfx/se_drag.wav",
+   "looping": false,
+   "seconds": 4.190625
+  },
+  {
+   "name": "se_nucha",
+   "path": "assets/sfx/se_nucha.wav",
+   "looping": false,
+   "seconds": 0.64203125
+  },
+  {
+   "name": "se_gan",
+   "path": "assets/sfx/se_gan.wav",
+   "looping": false,
+   "seconds": 1.6361451247165533
+  },
+  {
+   "name": "se_kiii",
+   "path": "assets/sfx/se_kiii.wav",
+   "looping": false,
+   "seconds": 1.6108125
+  },
+  {
+   "name": "se_guju",
+   "path": "assets/sfx/se_guju.wav",
+   "looping": false,
+   "seconds": 0.56284375
+  },
+  {
+   "name": "se_knee",
+   "path": "assets/sfx/se_knee.wav",
+   "looping": false,
+   "seconds": 0.6506875
+  },
+  {
+   "name": "se_tinnitus",
+   "path": "assets/sfx/se_tinnitus.wav",
+   "looping": false,
+   "seconds": 4.2
+  },
+  {
+   "name": "se_siren",
+   "path": "assets/sfx/se_siren.wav",
+   "looping": false,
+   "seconds": 7.8
+  },
+  {
+   "name": "se_siren_loop",
+   "path": "assets/sfx/se_siren_loop.wav",
+   "looping": true,
+   "seconds": 2.6
+  },
+  {
+   "name": "se_heart1",
+   "path": "assets/sfx/se_heart1.wav",
+   "looping": false,
+   "seconds": 0.8
+  },
+  {
+   "name": "se_breath_pass",
+   "path": "assets/sfx/se_breath_pass.wav",
+   "looping": false,
+   "seconds": 5
   }
  ],
  "design": {
   "w": 540,
-  "h": 960
+  "h": 1170
  },
  "touchGestures": {
   "longPress": "ContextMenu",
@@ -322,24 +482,44 @@
   "assets/bg/blood_color.jpg": "assets/bg/blood_color.webp",
   "assets/bg/blood_key.png": "assets/bg/blood_key.webp",
   "assets/bg/entrance_out.jpg": "assets/bg/entrance_out.webp",
+  "assets/bg/floor_drop.jpg": "assets/bg/floor_drop.webp",
   "assets/bg/gate.jpg": "assets/bg/gate.webp",
   "assets/bg/genkan.jpg": "assets/bg/genkan.webp",
   "assets/bg/hall1.jpg": "assets/bg/hall1.webp",
   "assets/bg/hall2.jpg": "assets/bg/hall2.webp",
+  "assets/bg/hall_door.jpg": "assets/bg/hall_door.webp",
   "assets/bg/hall_endless.jpg": "assets/bg/hall_endless.webp",
   "assets/bg/kaii_gap.png": "assets/bg/kaii_gap.webp",
   "assets/bg/kaii_window.png": "assets/bg/kaii_window.webp",
   "assets/bg/kitchen.jpg": "assets/bg/kitchen.webp",
+  "assets/bg/kitchen2.jpg": "assets/bg/kitchen2.webp",
+  "assets/bg/knife.jpg": "assets/bg/knife.webp",
   "assets/bg/living.jpg": "assets/bg/living.webp",
+  "assets/bg/living2.jpg": "assets/bg/living2.webp",
+  "assets/bg/living2_granny.jpg": "assets/bg/living2_granny.webp",
+  "assets/bg/okimono.jpg": "assets/bg/okimono.webp",
+  "assets/bg/omamori.jpg": "assets/bg/omamori.webp",
   "assets/bg/oshiire.jpg": "assets/bg/oshiire.webp",
+  "assets/bg/oshiire_eye.jpg": "assets/bg/oshiire_eye.webp",
+  "assets/bg/oshiire_in.jpg": "assets/bg/oshiire_in.webp",
+  "assets/bg/portrait.jpg": "assets/bg/portrait.webp",
   "assets/bg/room1.jpg": "assets/bg/room1.webp",
+  "assets/bg/room2.jpg": "assets/bg/room2.webp",
+  "assets/bg/room2_blood.jpg": "assets/bg/room2_blood.webp",
   "assets/bg/room_back.jpg": "assets/bg/room_back.webp",
   "assets/bg/stairs.jpg": "assets/bg/stairs.webp",
   "assets/bg/stairs_down.jpg": "assets/bg/stairs_down.webp",
+  "assets/bg/yard_up.jpg": "assets/bg/yard_up.webp",
+  "assets/cast/endcard_on.png": "assets/cast/endcard_on.webp",
+  "assets/cast/mist_on.png": "assets/cast/mist_on.webp",
+  "assets/cast/red_edge_on.png": "assets/cast/red_edge_on.webp",
   "assets/sfx/amb_house.wav": "assets/sfx/amb_house.webm",
   "assets/sfx/amb_wind.wav": "assets/sfx/amb_wind.webm",
   "assets/sfx/bgm_suspense.wav": "assets/sfx/bgm_suspense.webm",
+  "assets/sfx/se_bowl.wav": "assets/sfx/se_bowl.webm",
   "assets/sfx/se_breath.wav": "assets/sfx/se_breath.webm",
+  "assets/sfx/se_breath_pass.wav": "assets/sfx/se_breath_pass.webm",
+  "assets/sfx/se_chiin.wav": "assets/sfx/se_chiin.webm",
   "assets/sfx/se_cloth.wav": "assets/sfx/se_cloth.webm",
   "assets/sfx/se_comment.wav": "assets/sfx/se_comment.webm",
   "assets/sfx/se_creak.wav": "assets/sfx/se_creak.webm",
@@ -347,25 +527,43 @@
   "assets/sfx/se_door_heavy.wav": "assets/sfx/se_door_heavy.webm",
   "assets/sfx/se_door_slam.wav": "assets/sfx/se_door_slam.webm",
   "assets/sfx/se_door_slow.wav": "assets/sfx/se_door_slow.webm",
+  "assets/sfx/se_drag.wav": "assets/sfx/se_drag.webm",
   "assets/sfx/se_fusuma.wav": "assets/sfx/se_fusuma.webm",
   "assets/sfx/se_futon.wav": "assets/sfx/se_futon.webm",
+  "assets/sfx/se_gan.wav": "assets/sfx/se_gan.webm",
   "assets/sfx/se_gate.wav": "assets/sfx/se_gate.webm",
+  "assets/sfx/se_glass.wav": "assets/sfx/se_glass.webm",
   "assets/sfx/se_groan.wav": "assets/sfx/se_groan.webm",
   "assets/sfx/se_groan_far.wav": "assets/sfx/se_groan_far.webm",
+  "assets/sfx/se_gucha.wav": "assets/sfx/se_gucha.webm",
+  "assets/sfx/se_guju.wav": "assets/sfx/se_guju.webm",
+  "assets/sfx/se_gust.wav": "assets/sfx/se_gust.webm",
+  "assets/sfx/se_heart1.wav": "assets/sfx/se_heart1.webm",
   "assets/sfx/se_heartbeat.wav": "assets/sfx/se_heartbeat.webm",
+  "assets/sfx/se_kaan.wav": "assets/sfx/se_kaan.webm",
+  "assets/sfx/se_karan.wav": "assets/sfx/se_karan.webm",
+  "assets/sfx/se_kiii.wav": "assets/sfx/se_kiii.webm",
+  "assets/sfx/se_knee.wav": "assets/sfx/se_knee.webm",
+  "assets/sfx/se_knife.wav": "assets/sfx/se_knife.webm",
   "assets/sfx/se_knob.wav": "assets/sfx/se_knob.webm",
   "assets/sfx/se_lock.wav": "assets/sfx/se_lock.webm",
   "assets/sfx/se_lock_rattle.wav": "assets/sfx/se_lock_rattle.webm",
   "assets/sfx/se_noise.wav": "assets/sfx/se_noise.webm",
+  "assets/sfx/se_nucha.wav": "assets/sfx/se_nucha.webm",
   "assets/sfx/se_run.wav": "assets/sfx/se_run.webm",
   "assets/sfx/se_scream.wav": "assets/sfx/se_scream.webm",
+  "assets/sfx/se_siren.wav": "assets/sfx/se_siren.webm",
+  "assets/sfx/se_siren_loop.wav": "assets/sfx/se_siren_loop.webm",
+  "assets/sfx/se_slash.wav": "assets/sfx/se_slash.webm",
   "assets/sfx/se_sliding.wav": "assets/sfx/se_sliding.webm",
   "assets/sfx/se_splash.wav": "assets/sfx/se_splash.webm",
   "assets/sfx/se_stairs_down.wav": "assets/sfx/se_stairs_down.webm",
   "assets/sfx/se_stairs_slow.wav": "assets/sfx/se_stairs_slow.webm",
   "assets/sfx/se_stairs_up.wav": "assets/sfx/se_stairs_up.webm",
   "assets/sfx/se_step_heavy.wav": "assets/sfx/se_step_heavy.webm",
+  "assets/sfx/se_thud.wav": "assets/sfx/se_thud.webm",
   "assets/sfx/se_timer.wav": "assets/sfx/se_timer.webm",
+  "assets/sfx/se_tinnitus.wav": "assets/sfx/se_tinnitus.webm",
   "assets/sfx/se_vibrate.wav": "assets/sfx/se_vibrate.webm",
   "assets/sfx/ui_cursor.wav": "assets/sfx/ui_cursor.webm",
   "assets/sfx/ui_open.wav": "assets/sfx/ui_open.webm",
@@ -377,8 +575,22 @@
  },
  "deferred": [
   {
+   "path": "font-atlas/gothic.fontatlas",
+   "bytes": 897088,
+   "names": [
+    "gothic"
+   ]
+  },
+  {
+   "path": "font-atlas/gothic_bold.fontatlas",
+   "bytes": 923360,
+   "names": [
+    "gothic_bold"
+   ]
+  },
+  {
    "path": "assets/bg/entrance_out.jpg",
-   "bytes": 101424,
+   "bytes": 63464,
    "names": [
     "bg_entrance_out"
    ]
@@ -422,7 +634,7 @@
   },
   {
    "path": "assets/bg/genkan.jpg",
-   "bytes": 102338,
+   "bytes": 45790,
    "names": [
     "bg_genkan"
    ]
@@ -451,7 +663,7 @@
   },
   {
    "path": "assets/bg/hall1.jpg",
-   "bytes": 71894,
+   "bytes": 41110,
    "names": [
     "bg_hall1"
    ]
@@ -517,7 +729,7 @@
   },
   {
    "path": "assets/bg/stairs.jpg",
-   "bytes": 87896,
+   "bytes": 41236,
    "names": [
     "bg_stairs"
    ]
@@ -539,7 +751,7 @@
   },
   {
    "path": "assets/bg/hall2.jpg",
-   "bytes": 70566,
+   "bytes": 31778,
    "names": [
     "bg_hall2"
    ]
@@ -625,7 +837,7 @@
   },
   {
    "path": "assets/bg/stairs_down.jpg",
-   "bytes": 141486,
+   "bytes": 57966,
    "names": [
     "bg_stairs_down"
    ]
@@ -640,7 +852,7 @@
   },
   {
    "path": "assets/bg/hall_endless.jpg",
-   "bytes": 83738,
+   "bytes": 38386,
    "names": [
     "bg_hall_endless"
    ]
@@ -733,6 +945,97 @@
    ]
   },
   {
+   "path": "assets/bg/living2.jpg",
+   "bytes": 52460,
+   "names": [
+    "bg_living2"
+   ]
+  },
+  {
+   "path": "assets/bg/portrait.jpg",
+   "bytes": 83078,
+   "names": [
+    "bg_portrait"
+   ]
+  },
+  {
+   "path": "assets/bg/living2_granny.jpg",
+   "bytes": 45878,
+   "names": [
+    "bg_living2_granny"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_gucha.wav",
+   "bytes": 3661,
+   "names": [
+    "se_gucha"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_thud.wav",
+   "bytes": 4759,
+   "names": [
+    "se_thud"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_chiin.wav",
+   "bytes": 85723,
+   "names": [
+    "se_chiin"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_heart1.wav",
+   "bytes": 5574,
+   "names": [
+    "se_heart1"
+   ]
+  },
+  {
+   "path": "assets/bg/omamori.jpg",
+   "bytes": 90152,
+   "names": [
+    "bg_omamori"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_bowl.wav",
+   "bytes": 51859,
+   "names": [
+    "se_bowl"
+   ]
+  },
+  {
+   "path": "assets/bg/kitchen2.jpg",
+   "bytes": 72780,
+   "names": [
+    "bg_kitchen2"
+   ]
+  },
+  {
+   "path": "assets/bg/okimono.jpg",
+   "bytes": 106932,
+   "names": [
+    "bg_okimono"
+   ]
+  },
+  {
+   "path": "assets/bg/knife.jpg",
+   "bytes": 64896,
+   "names": [
+    "bg_knife"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_knife.wav",
+   "bytes": 19631,
+   "names": [
+    "se_knife"
+   ]
+  },
+  {
    "path": "assets/sfx/se_heartbeat.wav",
    "bytes": 11655,
    "names": [
@@ -740,10 +1043,59 @@
    ]
   },
   {
+   "path": "assets/sfx/se_tinnitus.wav",
+   "bytes": 77591,
+   "names": [
+    "se_tinnitus"
+   ]
+  },
+  {
+   "path": "assets/bg/room2.jpg",
+   "bytes": 45488,
+   "names": [
+    "bg_room2"
+   ]
+  },
+  {
+   "path": "assets/bg/oshiire_in.jpg",
+   "bytes": 31016,
+   "names": [
+    "bg_oshiire_in"
+   ]
+  },
+  {
+   "path": "assets/bg/room2_blood.jpg",
+   "bytes": 52250,
+   "names": [
+    "bg_room2_blood"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_kaan.wav",
+   "bytes": 65040,
+   "names": [
+    "se_kaan"
+   ]
+  },
+  {
    "path": "assets/sfx/se_breath.wav",
    "bytes": 40435,
    "names": [
     "se_breath"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_slash.wav",
+   "bytes": 4793,
+   "names": [
+    "se_slash"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_karan.wav",
+   "bytes": 14532,
+   "names": [
+    "se_karan"
    ]
   },
   {
@@ -775,10 +1127,115 @@
    ]
   },
   {
+   "path": "assets/bg/floor_drop.jpg",
+   "bytes": 68296,
+   "names": [
+    "bg_floor_drop"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_drag.wav",
+   "bytes": 25976,
+   "names": [
+    "se_drag"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_glass.wav",
+   "bytes": 13952,
+   "names": [
+    "se_glass"
+   ]
+  },
+  {
+   "path": "assets/bg/yard_up.jpg",
+   "bytes": 71212,
+   "names": [
+    "bg_yard_up"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_breath_pass.wav",
+   "bytes": 30911,
+   "names": [
+    "se_breath_pass"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_nucha.wav",
+   "bytes": 4482,
+   "names": [
+    "se_nucha"
+   ]
+  },
+  {
+   "path": "assets/bg/oshiire_eye.jpg",
+   "bytes": 35256,
+   "names": [
+    "bg_oshiire_eye"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_gan.wav",
+   "bytes": 25192,
+   "names": [
+    "se_gan"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_kiii.wav",
+   "bytes": 10346,
+   "names": [
+    "se_kiii"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_guju.wav",
+   "bytes": 4777,
+   "names": [
+    "se_guju"
+   ]
+  },
+  {
+   "path": "assets/bg/hall_door.jpg",
+   "bytes": 51884,
+   "names": [
+    "bg_hall_door"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_knee.wav",
+   "bytes": 5252,
+   "names": [
+    "se_knee"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_siren.wav",
+   "bytes": 131005,
+   "names": [
+    "se_siren"
+   ]
+  },
+  {
+   "path": "assets/sfx/se_siren_loop.wav",
+   "bytes": 43156,
+   "names": [
+    "se_siren_loop"
+   ]
+  },
+  {
    "path": "assets/sfx/se_scream.wav",
    "bytes": 15809,
    "names": [
     "se_scream"
+   ]
+  },
+  {
+   "path": "assets/cast/endcard_on.png",
+   "bytes": 79150,
+   "names": [
+    "cast_endcard_on"
    ]
   }
  ],
@@ -796,5 +1253,12 @@
    "minHeight": 960,
    "maxHeight": 1296
   }
+ },
+ "wasmBrotli": "classes.wasm.br",
+ "boot": {
+  "assets": 1644979,
+  "assetsWire": 1239027,
+  "wasm": 1685641,
+  "wasmWire": 1753912
  }
 }

@@ -35,6 +35,17 @@
       "x": 0.5,
       "bottom": 0.94,
       "height": 0.4
+    },
+    "screen": {
+      "x": 0.5,
+      "bottom": 1.0,
+      "height": 1.0,
+      "exclusive": false
+    },
+    "card": {
+      "x": 0.5,
+      "bottom": 0.62,
+      "height": 0.3
     }
   },
   "portraitSlots": {
@@ -62,8 +73,52 @@
       "x": 0.5,
       "bottom": 0.97,
       "height": 0.28
+    },
+    "screen": {
+      "x": 0.5,
+      "bottom": 1.0,
+      "height": 1.0,
+      "exclusive": false
+    },
+    "card": {
+      "x": 0.5,
+      "bottom": 0.64,
+      "height": 0.17
     }
   },
   "cast": {},
-  "props": {}
+  "props": {
+    "mist": {
+      "label": "黒い靄",
+      "aspect": 0.4615,
+      "scale": 1.0,
+      "face": "on",
+      "slot": "screen",
+      "faces": [
+        "on"
+      ]
+    },
+    "red_edge": {
+      "label": "赤く染まる縁",
+      "aspect": 0.4615,
+      "scale": 1.0,
+      "face": "on",
+      "slot": "screen",
+      "faces": [
+        "on"
+      ]
+    },
+    "endcard": {
+      "label": "最後の一文の絵",
+      "aspect": 2.6316,
+      "scale": 1.0,
+      "face": "on",
+      "slot": "card",
+      "faces": [
+        "on"
+      ],
+      "layer": 950,
+      "hideWindow": true
+    }
+  }
 }
