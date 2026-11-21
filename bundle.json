@@ -68,16 +68,14 @@
   "assets/walk/hall2.jpg",
   "assets/walk/hall_endless.glb",
   "assets/walk/hall_endless.jpg",
-  "assets/walk/kitchen.glb",
-  "assets/walk/kitchen.jpg",
-  "assets/walk/living.glb",
-  "assets/walk/living.jpg",
-  "assets/walk/oshiire.glb",
-  "assets/walk/oshiire.jpg",
-  "assets/walk/room1.glb",
-  "assets/walk/room1.jpg",
-  "assets/walk/room_back.glb",
-  "assets/walk/room_back.jpg",
+  "assets/walk/kitchen2.glb",
+  "assets/walk/kitchen2.jpg",
+  "assets/walk/living2.glb",
+  "assets/walk/living2.jpg",
+  "assets/walk/oshiire_in.glb",
+  "assets/walk/oshiire_in.jpg",
+  "assets/walk/room2.glb",
+  "assets/walk/room2.jpg",
   "assets/walk/stairs.glb",
   "assets/walk/stairs.jpg",
   "assets/walk/stairs_down.glb",
@@ -720,12 +718,22 @@
    "arrivalSeconds": 20.122
   },
   {
+   "path": "assets/walk/living2.glb",
+   "bytes": 156644,
+   "arrivalSeconds": 20.519
+  },
+  {
+   "path": "assets/walk/living2.jpg",
+   "bytes": 81293,
+   "arrivalSeconds": 21
+  },
+  {
    "path": "assets/bg/portrait.jpg",
    "bytes": 83078,
    "names": [
     "bg_portrait"
    ],
-   "arrivalSeconds": 20.612
+   "arrivalSeconds": 21.491
   },
   {
    "path": "assets/bg/living2_granny.jpg",
@@ -733,7 +741,7 @@
    "names": [
     "bg_living2_granny"
    ],
-   "arrivalSeconds": 20.916
+   "arrivalSeconds": 21.795
   },
   {
    "path": "assets/sfx/se_gucha.wav",
@@ -741,7 +749,7 @@
    "names": [
     "se_gucha"
    ],
-   "arrivalSeconds": 21.016
+   "arrivalSeconds": 21.895
   },
   {
    "path": "assets/sfx/se_thud.wav",
@@ -749,7 +757,7 @@
    "names": [
     "se_thud"
    ],
-   "arrivalSeconds": 21.115
+   "arrivalSeconds": 21.994
   },
   {
    "path": "assets/sfx/se_chiin.wav",
@@ -757,7 +765,7 @@
    "names": [
     "se_chiin"
    ],
-   "arrivalSeconds": 21.619
+   "arrivalSeconds": 22.498
   },
   {
    "path": "assets/sfx/se_heart1.wav",
@@ -765,7 +773,7 @@
    "names": [
     "se_heart1"
    ],
-   "arrivalSeconds": 21.722
+   "arrivalSeconds": 22.601
   },
   {
    "path": "assets/bg/omamori.jpg",
@@ -773,7 +781,7 @@
    "names": [
     "bg_omamori"
    ],
-   "arrivalSeconds": 22.248
+   "arrivalSeconds": 23.126
   },
   {
    "path": "assets/sfx/se_sliding.wav",
@@ -781,7 +789,7 @@
    "names": [
     "se_sliding"
    ],
-   "arrivalSeconds": 22.386
+   "arrivalSeconds": 23.264
   },
   {
    "path": "assets/sfx/se_bowl.wav",
@@ -789,7 +797,7 @@
    "names": [
     "se_bowl"
    ],
-   "arrivalSeconds": 22.584
+   "arrivalSeconds": 23.462
   },
   {
    "path": "assets/sfx/se_step_heavy.wav",
@@ -797,7 +805,7 @@
    "names": [
     "se_step_heavy"
    ],
-   "arrivalSeconds": 22.74
+   "arrivalSeconds": 23.619
   },
   {
    "path": "assets/bg/kitchen2.jpg",
@@ -805,7 +813,17 @@
    "names": [
     "bg_kitchen2"
    ],
-   "arrivalSeconds": 23.179
+   "arrivalSeconds": 24.057
+  },
+  {
+   "path": "assets/walk/kitchen2.glb",
+   "bytes": 213448,
+   "arrivalSeconds": 24.602
+  },
+  {
+   "path": "assets/walk/kitchen2.jpg",
+   "bytes": 97075,
+   "arrivalSeconds": 25.162
   },
   {
    "path": "assets/bg/okimono.jpg",
@@ -813,7 +831,7 @@
    "names": [
     "bg_okimono"
    ],
-   "arrivalSeconds": 23.737
+   "arrivalSeconds": 25.721
   },
   {
    "path": "assets/bg/knife.jpg",
@@ -821,7 +839,7 @@
    "names": [
     "bg_knife"
    ],
-   "arrivalSeconds": 24.137
+   "arrivalSeconds": 26.12
   },
   {
    "path": "assets/sfx/se_knife.wav",
@@ -829,7 +847,7 @@
    "names": [
     "se_knife"
    ],
-   "arrivalSeconds": 24.31
+   "arrivalSeconds": 26.293
   },
   {
    "path": "assets/sfx/se_heartbeat.wav",
@@ -837,7 +855,7 @@
    "names": [
     "se_heartbeat"
    ],
-   "arrivalSeconds": 24.443
+   "arrivalSeconds": 26.426
   },
   {
    "path": "assets/sfx/se_tinnitus.wav",
@@ -845,7 +863,7 @@
    "names": [
     "se_tinnitus"
    ],
-   "arrivalSeconds": 24.914
+   "arrivalSeconds": 26.897
   },
   {
    "path": "assets/bg/stairs.jpg",
@@ -853,17 +871,17 @@
    "names": [
     "bg_stairs"
    ],
-   "arrivalSeconds": 25.195
+   "arrivalSeconds": 27.178
   },
   {
    "path": "assets/walk/stairs.glb",
    "bytes": 255832,
-   "arrivalSeconds": 26.023
+   "arrivalSeconds": 28.006
   },
   {
    "path": "assets/walk/stairs.jpg",
    "bytes": 93679,
-   "arrivalSeconds": 26.566
+   "arrivalSeconds": 28.549
   },
   {
    "path": "assets/sfx/se_stairs_slow.wav",
@@ -871,7 +889,7 @@
    "names": [
     "se_stairs_slow"
    ],
-   "arrivalSeconds": 26.746
+   "arrivalSeconds": 28.729
   },
   {
    "path": "assets/sfx/se_stairs_up.wav",
@@ -879,7 +897,7 @@
    "names": [
     "se_stairs_up"
    ],
-   "arrivalSeconds": 26.906
+   "arrivalSeconds": 28.89
   },
   {
    "path": "assets/bg/hall2.jpg",
@@ -887,7 +905,7 @@
    "names": [
     "bg_hall2"
    ],
-   "arrivalSeconds": 27.14
+   "arrivalSeconds": 29.124
   },
   {
    "path": "assets/sfx/se_run.wav",
@@ -895,17 +913,17 @@
    "names": [
     "se_run"
    ],
-   "arrivalSeconds": 27.409
+   "arrivalSeconds": 29.393
   },
   {
    "path": "assets/walk/hall2.glb",
    "bytes": 202452,
-   "arrivalSeconds": 28.067
+   "arrivalSeconds": 30.051
   },
   {
    "path": "assets/walk/hall2.jpg",
    "bytes": 83432,
-   "arrivalSeconds": 28.56
+   "arrivalSeconds": 30.543
   },
   {
    "path": "assets/bg/room2.jpg",
@@ -913,7 +931,17 @@
    "names": [
     "bg_room2"
    ],
-   "arrivalSeconds": 28.862
+   "arrivalSeconds": 30.845
+  },
+  {
+   "path": "assets/walk/room2.glb",
+   "bytes": 158432,
+   "arrivalSeconds": 31.239
+  },
+  {
+   "path": "assets/walk/room2.jpg",
+   "bytes": 72576,
+   "arrivalSeconds": 31.677
   },
   {
    "path": "assets/bg/kaii_window.png",
@@ -921,7 +949,7 @@
    "names": [
     "kaii_window"
    ],
-   "arrivalSeconds": 29.068
+   "arrivalSeconds": 31.883
   },
   {
    "path": "assets/sfx/se_fusuma_open.wav",
@@ -929,7 +957,7 @@
    "names": [
     "se_fusuma_open"
    ],
-   "arrivalSeconds": 29.215
+   "arrivalSeconds": 32.03
   },
   {
    "path": "assets/bg/oshiire_look.jpg",
@@ -937,7 +965,7 @@
    "names": [
     "bg_oshiire_look"
    ],
-   "arrivalSeconds": 29.488
+   "arrivalSeconds": 32.302
   },
   {
    "path": "assets/sfx/se_splash.wav",
@@ -945,7 +973,7 @@
    "names": [
     "se_splash"
    ],
-   "arrivalSeconds": 29.583
+   "arrivalSeconds": 32.398
   },
   {
    "path": "assets/bg/room2_blood.jpg",
@@ -953,7 +981,7 @@
    "names": [
     "bg_room2_blood"
    ],
-   "arrivalSeconds": 29.919
+   "arrivalSeconds": 32.734
   },
   {
    "path": "assets/sfx/se_splash_twice.wav",
@@ -961,7 +989,7 @@
    "names": [
     "se_splash_twice"
    ],
-   "arrivalSeconds": 30.037
+   "arrivalSeconds": 32.851
   },
   {
    "path": "assets/bg/stairs_down.jpg",
@@ -969,7 +997,7 @@
    "names": [
     "bg_stairs_down"
    ],
-   "arrivalSeconds": 30.402
+   "arrivalSeconds": 33.216
   },
   {
    "path": "assets/sfx/se_stairs_down.wav",
@@ -977,7 +1005,7 @@
    "names": [
     "se_stairs_down"
    ],
-   "arrivalSeconds": 30.597
+   "arrivalSeconds": 33.411
   },
   {
    "path": "assets/bg/hall_endless.jpg",
@@ -985,27 +1013,27 @@
    "names": [
     "bg_hall_endless"
    ],
-   "arrivalSeconds": 30.864
+   "arrivalSeconds": 33.678
   },
   {
    "path": "assets/walk/stairs_down.glb",
    "bytes": 237700,
-   "arrivalSeconds": 31.612
+   "arrivalSeconds": 34.426
   },
   {
    "path": "assets/walk/stairs_down.jpg",
    "bytes": 141182,
-   "arrivalSeconds": 32.393
+   "arrivalSeconds": 35.207
   },
   {
    "path": "assets/walk/hall_endless.glb",
    "bytes": 233480,
-   "arrivalSeconds": 33.169
+   "arrivalSeconds": 35.983
   },
   {
    "path": "assets/walk/hall_endless.jpg",
    "bytes": 87479,
-   "arrivalSeconds": 33.681
+   "arrivalSeconds": 36.496
   },
   {
    "path": "assets/sfx/se_kaan.wav",
@@ -1013,7 +1041,7 @@
    "names": [
     "se_kaan"
    ],
-   "arrivalSeconds": 34.081
+   "arrivalSeconds": 36.896
   },
   {
    "path": "assets/sfx/se_breath.wav",
@@ -1021,7 +1049,7 @@
    "names": [
     "se_breath"
    ],
-   "arrivalSeconds": 34.359
+   "arrivalSeconds": 37.173
   },
   {
    "path": "assets/sfx/se_slash.wav",
@@ -1029,7 +1057,7 @@
    "names": [
     "se_slash"
    ],
-   "arrivalSeconds": 34.458
+   "arrivalSeconds": 37.272
   },
   {
    "path": "assets/sfx/se_karan.wav",
@@ -1037,7 +1065,7 @@
    "names": [
     "se_karan"
    ],
-   "arrivalSeconds": 34.605
+   "arrivalSeconds": 37.42
   },
   {
    "path": "assets/sfx/se_noise.wav",
@@ -1045,7 +1073,7 @@
    "names": [
     "se_noise"
    ],
-   "arrivalSeconds": 34.725
+   "arrivalSeconds": 37.54
   },
   {
    "path": "assets/bg/floor_drop.jpg",
@@ -1053,7 +1081,7 @@
    "names": [
     "bg_floor_drop"
    ],
-   "arrivalSeconds": 35.142
+   "arrivalSeconds": 37.956
   },
   {
    "path": "assets/sfx/se_door_slam.wav",
@@ -1061,7 +1089,7 @@
    "names": [
     "se_door_slam"
    ],
-   "arrivalSeconds": 35.237
+   "arrivalSeconds": 38.052
   },
   {
    "path": "assets/sfx/se_drag.wav",
@@ -1069,7 +1097,7 @@
    "names": [
     "se_drag"
    ],
-   "arrivalSeconds": 35.441
+   "arrivalSeconds": 38.255
   },
   {
    "path": "assets/sfx/se_lock_rattle.wav",
@@ -1077,7 +1105,7 @@
    "names": [
     "se_lock_rattle"
    ],
-   "arrivalSeconds": 35.62
+   "arrivalSeconds": 38.435
   },
   {
    "path": "assets/sfx/se_glass.wav",
@@ -1085,7 +1113,7 @@
    "names": [
     "se_glass"
    ],
-   "arrivalSeconds": 35.765
+   "arrivalSeconds": 38.58
   },
   {
    "path": "assets/bg/yard_up.jpg",
@@ -1093,7 +1121,7 @@
    "names": [
     "bg_yard_up"
    ],
-   "arrivalSeconds": 36.196
+   "arrivalSeconds": 39.011
   },
   {
    "path": "assets/sfx/se_fusuma.wav",
@@ -1101,7 +1129,7 @@
    "names": [
     "se_fusuma"
    ],
-   "arrivalSeconds": 36.426
+   "arrivalSeconds": 39.241
   },
   {
    "path": "assets/bg/oshiire_in.jpg",
@@ -1109,7 +1137,17 @@
    "names": [
     "bg_oshiire_in"
    ],
-   "arrivalSeconds": 36.656
+   "arrivalSeconds": 39.471
+  },
+  {
+   "path": "assets/walk/oshiire_in.glb",
+   "bytes": 128336,
+   "arrivalSeconds": 39.802
+  },
+  {
+   "path": "assets/walk/oshiire_in.jpg",
+   "bytes": 68358,
+   "arrivalSeconds": 40.219
   },
   {
    "path": "assets/sfx/se_breath_pass.wav",
@@ -1117,7 +1155,7 @@
    "names": [
     "se_breath_pass"
    ],
-   "arrivalSeconds": 36.886
+   "arrivalSeconds": 40.449
   },
   {
    "path": "assets/sfx/se_nucha.wav",
@@ -1125,7 +1163,7 @@
    "names": [
     "se_nucha"
    ],
-   "arrivalSeconds": 36.984
+   "arrivalSeconds": 40.547
   },
   {
    "path": "assets/bg/oshiire_eye.jpg",
@@ -1133,7 +1171,7 @@
    "names": [
     "bg_oshiire_eye"
    ],
-   "arrivalSeconds": 37.235
+   "arrivalSeconds": 40.798
   },
   {
    "path": "assets/sfx/se_gan.wav",
@@ -1141,7 +1179,7 @@
    "names": [
     "se_gan"
    ],
-   "arrivalSeconds": 37.432
+   "arrivalSeconds": 40.995
   },
   {
    "path": "assets/sfx/se_kiii.wav",
@@ -1149,7 +1187,7 @@
    "names": [
     "se_kiii"
    ],
-   "arrivalSeconds": 37.558
+   "arrivalSeconds": 41.121
   },
   {
    "path": "assets/sfx/se_guju.wav",
@@ -1157,7 +1195,7 @@
    "names": [
     "se_guju"
    ],
-   "arrivalSeconds": 37.657
+   "arrivalSeconds": 41.22
   },
   {
    "path": "assets/bg/hall_door.jpg",
@@ -1165,7 +1203,7 @@
    "names": [
     "bg_hall_door"
    ],
-   "arrivalSeconds": 37.992
+   "arrivalSeconds": 41.555
   },
   {
    "path": "assets/sfx/se_knee.wav",
@@ -1173,7 +1211,7 @@
    "names": [
     "se_knee"
    ],
-   "arrivalSeconds": 38.087
+   "arrivalSeconds": 41.65
   },
   {
    "path": "assets/sfx/se_siren.wav",
@@ -1181,7 +1219,7 @@
    "names": [
     "se_siren"
    ],
-   "arrivalSeconds": 38.817
+   "arrivalSeconds": 42.38
   },
   {
    "path": "assets/sfx/se_siren_loop.wav",
@@ -1189,7 +1227,7 @@
    "names": [
     "se_siren_loop"
    ],
-   "arrivalSeconds": 39.108
+   "arrivalSeconds": 42.671
   },
   {
    "path": "assets/cast/endcard_on.png",
@@ -1197,7 +1235,7 @@
    "names": [
     "cast_endcard_on"
    ],
-   "arrivalSeconds": 39.44
+   "arrivalSeconds": 43.003
   },
   {
    "path": "assets/bg/living.jpg",
@@ -1205,17 +1243,7 @@
    "names": [
     "bg_living"
    ],
-   "arrivalSeconds": 39.883
-  },
-  {
-   "path": "assets/walk/living.glb",
-   "bytes": 317000,
-   "arrivalSeconds": 40.901
-  },
-  {
-   "path": "assets/walk/living.jpg",
-   "bytes": 76727,
-   "arrivalSeconds": 41.36
+   "arrivalSeconds": 43.446
   },
   {
    "path": "assets/sfx/se_timer.wav",
@@ -1223,7 +1251,7 @@
    "names": [
     "se_timer"
    ],
-   "arrivalSeconds": 41.562
+   "arrivalSeconds": 43.648
   },
   {
    "path": "assets/bg/kitchen.jpg",
@@ -1231,17 +1259,7 @@
    "names": [
     "bg_kitchen"
    ],
-   "arrivalSeconds": 42.127
-  },
-  {
-   "path": "assets/walk/kitchen.glb",
-   "bytes": 200664,
-   "arrivalSeconds": 42.798
-  },
-  {
-   "path": "assets/walk/kitchen.jpg",
-   "bytes": 105348,
-   "arrivalSeconds": 43.4
+   "arrivalSeconds": 44.214
   },
   {
    "path": "assets/sfx/se_groan.wav",
@@ -1249,7 +1267,7 @@
    "names": [
     "se_groan"
    ],
-   "arrivalSeconds": 43.545
+   "arrivalSeconds": 44.359
   },
   {
    "path": "assets/sfx/se_groan_far.wav",
@@ -1257,7 +1275,7 @@
    "names": [
     "se_groan_far"
    ],
-   "arrivalSeconds": 43.719
+   "arrivalSeconds": 44.533
   },
   {
    "path": "assets/sfx/se_knob.wav",
@@ -1265,7 +1283,7 @@
    "names": [
     "se_knob"
    ],
-   "arrivalSeconds": 43.827
+   "arrivalSeconds": 44.641
   },
   {
    "path": "assets/bg/room1.jpg",
@@ -1273,17 +1291,7 @@
    "names": [
     "bg_room1"
    ],
-   "arrivalSeconds": 44.156
-  },
-  {
-   "path": "assets/walk/room1.glb",
-   "bytes": 250760,
-   "arrivalSeconds": 44.901
-  },
-  {
-   "path": "assets/walk/room1.jpg",
-   "bytes": 55105,
-   "arrivalSeconds": 45.252
+   "arrivalSeconds": 44.97
   },
   {
    "path": "assets/bg/blood_color.jpg",
@@ -1291,7 +1299,7 @@
    "names": [
     "blood_color"
    ],
-   "arrivalSeconds": 45.607
+   "arrivalSeconds": 45.325
   },
   {
    "path": "assets/bg/blood_key.png",
@@ -1299,7 +1307,7 @@
    "names": [
     "blood_key"
    ],
-   "arrivalSeconds": 46.029
+   "arrivalSeconds": 45.746
   },
   {
    "path": "assets/sfx/se_lock.wav",
@@ -1307,7 +1315,7 @@
    "names": [
     "se_lock"
    ],
-   "arrivalSeconds": 46.126
+   "arrivalSeconds": 45.844
   },
   {
    "path": "assets/bg/room_back.jpg",
@@ -1315,17 +1323,7 @@
    "names": [
     "bg_room_back"
    ],
-   "arrivalSeconds": 46.607
-  },
-  {
-   "path": "assets/walk/room_back.glb",
-   "bytes": 297916,
-   "arrivalSeconds": 47.43
-  },
-  {
-   "path": "assets/walk/room_back.jpg",
-   "bytes": 79635,
-   "arrivalSeconds": 47.903
+   "arrivalSeconds": 46.325
   },
   {
    "path": "assets/sfx/se_futon.wav",
@@ -1333,7 +1331,7 @@
    "names": [
     "se_futon"
    ],
-   "arrivalSeconds": 48.059
+   "arrivalSeconds": 46.48
   },
   {
    "path": "assets/bg/oshiire.jpg",
@@ -1341,17 +1339,7 @@
    "names": [
     "bg_oshiire"
    ],
-   "arrivalSeconds": 48.375
-  },
-  {
-   "path": "assets/walk/oshiire.glb",
-   "bytes": 103528,
-   "arrivalSeconds": 48.693
-  },
-  {
-   "path": "assets/walk/oshiire.jpg",
-   "bytes": 47148,
-   "arrivalSeconds": 49.003
+   "arrivalSeconds": 46.797
   },
   {
    "path": "assets/sfx/se_door_close.wav",
@@ -1359,7 +1347,7 @@
    "names": [
     "se_door_close"
    ],
-   "arrivalSeconds": 49.1
+   "arrivalSeconds": 46.894
   },
   {
    "path": "assets/sfx/se_vibrate.wav",
@@ -1367,7 +1355,7 @@
    "names": [
     "se_vibrate"
    ],
-   "arrivalSeconds": 49.208
+   "arrivalSeconds": 47.001
   },
   {
    "path": "assets/bg/kaii_gap.png",
@@ -1375,7 +1363,7 @@
    "names": [
     "kaii_gap"
    ],
-   "arrivalSeconds": 49.398
+   "arrivalSeconds": 47.192
   },
   {
    "path": "assets/sfx/se_scream.wav",
@@ -1383,7 +1371,7 @@
    "names": [
     "se_scream"
    ],
-   "arrivalSeconds": 49.553
+   "arrivalSeconds": 47.346
   }
  ],
  "splash": {
@@ -1408,10 +1396,10 @@
  },
  "wasmBrotli": "classes.wasm.br",
  "boot": {
-  "assets": 1646234,
-  "assetsWire": 1239400,
-  "wasm": 1673626,
-  "wasmWire": 1741897
+  "assets": 1610375,
+  "assetsWire": 1236393,
+  "wasm": 1674432,
+  "wasmWire": 1742703
  },
  "serviceWorker": true,
  "startupBudget": {
