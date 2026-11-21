@@ -119,6 +119,11 @@
       "label": "二階の部屋の血だまり",
       "aspect": 0.4615
     },
+    "oshiire_look": {
+      "texture": "bg_oshiire_look",
+      "label": "押し入れの中（外から覗く）",
+      "aspect": 0.4615
+    },
     "oshiire_in": {
       "texture": "bg_oshiire_in",
       "label": "押し入れの中（襖の隙間）",
