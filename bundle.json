@@ -579,664 +579,770 @@
    "bytes": 897088,
    "names": [
     "gothic"
-   ]
+   ],
+   "arrivalSeconds": 4.302
   },
   {
    "path": "font-atlas/gothic_bold.fontatlas",
    "bytes": 923360,
    "names": [
     "gothic_bold"
-   ]
+   ],
+   "arrivalSeconds": 8.733
   },
   {
    "path": "assets/bg/entrance_out.jpg",
    "bytes": 63464,
    "names": [
     "bg_entrance_out"
-   ]
+   ],
+   "arrivalSeconds": 9.125
   },
   {
    "path": "assets/walk/gate.glb",
-   "bytes": 407712
+   "bytes": 407712,
+   "arrivalSeconds": 10.216
   },
   {
    "path": "assets/walk/gate.jpg",
-   "bytes": 121892
+   "bytes": 121892,
+   "arrivalSeconds": 10.901
   },
   {
    "path": "assets/walk/entrance_out.glb",
-   "bytes": 224828
+   "bytes": 224828,
+   "arrivalSeconds": 11.511
   },
   {
    "path": "assets/walk/entrance_out.jpg",
-   "bytes": 101954
+   "bytes": 101954,
+   "arrivalSeconds": 12.096
   },
   {
    "path": "assets/sfx/se_creak.wav",
-   "bytes": 3899,
+   "bytes": 3887,
    "names": [
     "se_creak"
-   ]
+   ],
+   "arrivalSeconds": 12.19
   },
   {
    "path": "assets/sfx/se_stairs_slow.wav",
-   "bytes": 20900,
+   "bytes": 20888,
    "names": [
     "se_stairs_slow"
-   ]
+   ],
+   "arrivalSeconds": 12.37
   },
   {
    "path": "assets/sfx/se_door_heavy.wav",
-   "bytes": 21656,
+   "bytes": 21644,
    "names": [
     "se_door_heavy"
-   ]
+   ],
+   "arrivalSeconds": 12.553
   },
   {
    "path": "assets/bg/genkan.jpg",
    "bytes": 45790,
    "names": [
     "bg_genkan"
-   ]
+   ],
+   "arrivalSeconds": 12.857
   },
   {
    "path": "assets/sfx/amb_house.wav",
-   "bytes": 104383,
+   "bytes": 104371,
    "names": [
     "amb_house"
-   ]
+   ],
+   "arrivalSeconds": 13.454
   },
   {
    "path": "assets/sfx/bgm_suspense.wav",
-   "bytes": 688532,
+   "bytes": 688520,
    "names": [
     "bgm_suspense"
-   ]
+   ],
+   "arrivalSeconds": 16.971
   },
   {
    "path": "assets/walk/genkan.glb",
-   "bytes": 258540
+   "bytes": 258540,
+   "arrivalSeconds": 17.807
   },
   {
    "path": "assets/walk/genkan.jpg",
-   "bytes": 106102
+   "bytes": 106102,
+   "arrivalSeconds": 18.412
   },
   {
    "path": "assets/bg/hall1.jpg",
    "bytes": 41110,
    "names": [
     "bg_hall1"
-   ]
+   ],
+   "arrivalSeconds": 18.693
   },
   {
    "path": "assets/walk/hall1.glb",
-   "bytes": 168776
+   "bytes": 168776,
+   "arrivalSeconds": 19.272
   },
   {
    "path": "assets/walk/hall1.jpg",
-   "bytes": 82870
+   "bytes": 82870,
+   "arrivalSeconds": 19.761
   },
   {
    "path": "assets/bg/living.jpg",
    "bytes": 73770,
    "names": [
     "bg_living"
-   ]
+   ],
+   "arrivalSeconds": 20.205
   },
   {
    "path": "assets/walk/living.glb",
-   "bytes": 317000
+   "bytes": 317000,
+   "arrivalSeconds": 21.223
   },
   {
    "path": "assets/walk/living.jpg",
-   "bytes": 76727
+   "bytes": 76727,
+   "arrivalSeconds": 21.682
   },
   {
    "path": "assets/sfx/se_timer.wav",
-   "bytes": 25417,
+   "bytes": 25405,
    "names": [
     "se_timer"
-   ]
+   ],
+   "arrivalSeconds": 21.884
   },
   {
    "path": "assets/bg/kitchen.jpg",
    "bytes": 98064,
    "names": [
     "bg_kitchen"
-   ]
+   ],
+   "arrivalSeconds": 22.449
   },
   {
    "path": "assets/walk/kitchen.glb",
-   "bytes": 200664
+   "bytes": 200664,
+   "arrivalSeconds": 23.12
   },
   {
    "path": "assets/walk/kitchen.jpg",
-   "bytes": 105348
+   "bytes": 105348,
+   "arrivalSeconds": 23.722
   },
   {
    "path": "assets/sfx/se_sliding.wav",
-   "bytes": 12636,
+   "bytes": 12624,
    "names": [
     "se_sliding"
-   ]
+   ],
+   "arrivalSeconds": 23.86
   },
   {
    "path": "assets/sfx/se_groan.wav",
-   "bytes": 13967,
+   "bytes": 13955,
    "names": [
     "se_groan"
-   ]
+   ],
+   "arrivalSeconds": 24.005
   },
   {
    "path": "assets/bg/stairs.jpg",
    "bytes": 41236,
    "names": [
     "bg_stairs"
-   ]
+   ],
+   "arrivalSeconds": 24.286
   },
   {
    "path": "assets/walk/stairs.glb",
-   "bytes": 255832
+   "bytes": 255832,
+   "arrivalSeconds": 25.113
   },
   {
    "path": "assets/walk/stairs.jpg",
-   "bytes": 93679
+   "bytes": 93679,
+   "arrivalSeconds": 25.657
   },
   {
    "path": "assets/sfx/se_stairs_up.wav",
-   "bytes": 17182,
+   "bytes": 17170,
    "names": [
     "se_stairs_up"
-   ]
+   ],
+   "arrivalSeconds": 25.818
   },
   {
    "path": "assets/bg/hall2.jpg",
    "bytes": 31778,
    "names": [
     "bg_hall2"
-   ]
+   ],
+   "arrivalSeconds": 26.052
   },
   {
    "path": "assets/walk/hall2.glb",
-   "bytes": 202452
+   "bytes": 202452,
+   "arrivalSeconds": 26.71
   },
   {
    "path": "assets/walk/hall2.jpg",
-   "bytes": 83432
+   "bytes": 83432,
+   "arrivalSeconds": 27.202
   },
   {
    "path": "assets/sfx/se_groan_far.wav",
-   "bytes": 19871,
+   "bytes": 19859,
    "names": [
     "se_groan_far"
-   ]
+   ],
+   "arrivalSeconds": 27.376
   },
   {
    "path": "assets/sfx/se_knob.wav",
-   "bytes": 6561,
+   "bytes": 6549,
    "names": [
     "se_knob"
-   ]
+   ],
+   "arrivalSeconds": 27.484
   },
   {
    "path": "assets/bg/room1.jpg",
    "bytes": 50778,
    "names": [
     "bg_room1"
-   ]
+   ],
+   "arrivalSeconds": 27.813
   },
   {
    "path": "assets/walk/room1.glb",
-   "bytes": 250760
+   "bytes": 250760,
+   "arrivalSeconds": 28.558
   },
   {
    "path": "assets/walk/room1.jpg",
-   "bytes": 55105
+   "bytes": 55105,
+   "arrivalSeconds": 28.909
   },
   {
    "path": "assets/bg/kaii_window.png",
    "bytes": 26220,
    "names": [
     "kaii_window"
-   ]
+   ],
+   "arrivalSeconds": 29.115
   },
   {
    "path": "assets/sfx/se_splash.wav",
-   "bytes": 4099,
+   "bytes": 4087,
    "names": [
     "se_splash"
-   ]
+   ],
+   "arrivalSeconds": 29.21
   },
   {
    "path": "assets/bg/blood_color.jpg",
    "bytes": 55968,
    "names": [
     "blood_color"
-   ]
+   ],
+   "arrivalSeconds": 29.565
   },
   {
    "path": "assets/bg/blood_key.png",
-   "bytes": 155740,
+   "bytes": 69390,
    "names": [
     "blood_key"
-   ]
+   ],
+   "arrivalSeconds": 29.987
   },
   {
    "path": "assets/sfx/se_run.wav",
-   "bytes": 38812,
+   "bytes": 38800,
    "names": [
     "se_run"
-   ]
+   ],
+   "arrivalSeconds": 30.256
   },
   {
    "path": "assets/sfx/se_stairs_down.wav",
-   "bytes": 24033,
+   "bytes": 24021,
    "names": [
     "se_stairs_down"
-   ]
+   ],
+   "arrivalSeconds": 30.451
   },
   {
    "path": "assets/bg/stairs_down.jpg",
    "bytes": 57966,
    "names": [
     "bg_stairs_down"
-   ]
+   ],
+   "arrivalSeconds": 30.816
   },
   {
    "path": "assets/walk/stairs_down.glb",
-   "bytes": 237700
+   "bytes": 237700,
+   "arrivalSeconds": 31.564
   },
   {
    "path": "assets/walk/stairs_down.jpg",
-   "bytes": 141182
+   "bytes": 141182,
+   "arrivalSeconds": 32.345
   },
   {
    "path": "assets/bg/hall_endless.jpg",
    "bytes": 38386,
    "names": [
     "bg_hall_endless"
-   ]
+   ],
+   "arrivalSeconds": 32.612
   },
   {
    "path": "assets/walk/hall_endless.glb",
-   "bytes": 233480
+   "bytes": 233480,
+   "arrivalSeconds": 33.388
   },
   {
    "path": "assets/walk/hall_endless.jpg",
-   "bytes": 87479
+   "bytes": 87479,
+   "arrivalSeconds": 33.9
   },
   {
    "path": "assets/sfx/se_step_heavy.wav",
-   "bytes": 5273,
+   "bytes": 5261,
    "names": [
     "se_step_heavy"
-   ]
+   ],
+   "arrivalSeconds": 34.002
   },
   {
    "path": "assets/sfx/se_door_slam.wav",
-   "bytes": 4120,
+   "bytes": 4108,
    "names": [
     "se_door_slam"
-   ]
+   ],
+   "arrivalSeconds": 34.097
   },
   {
    "path": "assets/sfx/se_lock.wav",
-   "bytes": 4490,
+   "bytes": 4478,
    "names": [
     "se_lock"
-   ]
+   ],
+   "arrivalSeconds": 34.195
   },
   {
    "path": "assets/bg/room_back.jpg",
    "bytes": 81204,
    "names": [
     "bg_room_back"
-   ]
+   ],
+   "arrivalSeconds": 34.676
   },
   {
    "path": "assets/walk/room_back.glb",
-   "bytes": 297916
+   "bytes": 297916,
+   "arrivalSeconds": 35.499
   },
   {
    "path": "assets/walk/room_back.jpg",
-   "bytes": 79635
+   "bytes": 79635,
+   "arrivalSeconds": 35.972
   },
   {
    "path": "assets/sfx/se_fusuma.wav",
-   "bytes": 30994,
+   "bytes": 30982,
    "names": [
     "se_fusuma"
-   ]
+   ],
+   "arrivalSeconds": 36.202
   },
   {
    "path": "assets/sfx/se_futon.wav",
-   "bytes": 16080,
+   "bytes": 16068,
    "names": [
     "se_futon"
-   ]
+   ],
+   "arrivalSeconds": 36.357
   },
   {
    "path": "assets/bg/oshiire.jpg",
    "bytes": 48334,
    "names": [
     "bg_oshiire"
-   ]
+   ],
+   "arrivalSeconds": 36.674
   },
   {
    "path": "assets/walk/oshiire.glb",
-   "bytes": 103528
+   "bytes": 103528,
+   "arrivalSeconds": 36.991
   },
   {
    "path": "assets/walk/oshiire.jpg",
-   "bytes": 47148
+   "bytes": 47148,
+   "arrivalSeconds": 37.302
   },
   {
    "path": "assets/sfx/se_lock_rattle.wav",
-   "bytes": 20946,
+   "bytes": 20934,
    "names": [
     "se_lock_rattle"
-   ]
+   ],
+   "arrivalSeconds": 37.481
   },
   {
    "path": "assets/sfx/se_door_slow.wav",
-   "bytes": 25418,
+   "bytes": 25406,
    "names": [
     "se_door_slow"
-   ]
+   ],
+   "arrivalSeconds": 37.683
   },
   {
    "path": "assets/bg/living2.jpg",
    "bytes": 52460,
    "names": [
     "bg_living2"
-   ]
+   ],
+   "arrivalSeconds": 38.021
   },
   {
    "path": "assets/bg/portrait.jpg",
    "bytes": 83078,
    "names": [
     "bg_portrait"
-   ]
+   ],
+   "arrivalSeconds": 38.511
   },
   {
    "path": "assets/bg/living2_granny.jpg",
    "bytes": 45878,
    "names": [
     "bg_living2_granny"
-   ]
+   ],
+   "arrivalSeconds": 38.816
   },
   {
    "path": "assets/sfx/se_gucha.wav",
-   "bytes": 3661,
+   "bytes": 3649,
    "names": [
     "se_gucha"
-   ]
+   ],
+   "arrivalSeconds": 38.909
   },
   {
    "path": "assets/sfx/se_thud.wav",
-   "bytes": 4759,
+   "bytes": 4747,
    "names": [
     "se_thud"
-   ]
+   ],
+   "arrivalSeconds": 39.008
   },
   {
    "path": "assets/sfx/se_chiin.wav",
-   "bytes": 85723,
+   "bytes": 85711,
    "names": [
     "se_chiin"
-   ]
+   ],
+   "arrivalSeconds": 39.511
   },
   {
    "path": "assets/sfx/se_heart1.wav",
-   "bytes": 5574,
+   "bytes": 5562,
    "names": [
     "se_heart1"
-   ]
+   ],
+   "arrivalSeconds": 39.614
   },
   {
    "path": "assets/bg/omamori.jpg",
    "bytes": 90152,
    "names": [
     "bg_omamori"
-   ]
+   ],
+   "arrivalSeconds": 40.14
   },
   {
    "path": "assets/sfx/se_bowl.wav",
-   "bytes": 51859,
+   "bytes": 51847,
    "names": [
     "se_bowl"
-   ]
+   ],
+   "arrivalSeconds": 40.474
   },
   {
    "path": "assets/bg/kitchen2.jpg",
    "bytes": 72780,
    "names": [
     "bg_kitchen2"
-   ]
+   ],
+   "arrivalSeconds": 40.913
   },
   {
    "path": "assets/bg/okimono.jpg",
    "bytes": 106932,
    "names": [
     "bg_okimono"
-   ]
+   ],
+   "arrivalSeconds": 41.522
   },
   {
    "path": "assets/bg/knife.jpg",
    "bytes": 64896,
    "names": [
     "bg_knife"
-   ]
+   ],
+   "arrivalSeconds": 41.922
   },
   {
    "path": "assets/sfx/se_knife.wav",
-   "bytes": 19631,
+   "bytes": 19619,
    "names": [
     "se_knife"
-   ]
+   ],
+   "arrivalSeconds": 42.095
   },
   {
    "path": "assets/sfx/se_heartbeat.wav",
-   "bytes": 11655,
+   "bytes": 11643,
    "names": [
     "se_heartbeat"
-   ]
+   ],
+   "arrivalSeconds": 42.228
   },
   {
    "path": "assets/sfx/se_tinnitus.wav",
-   "bytes": 77591,
+   "bytes": 77579,
    "names": [
     "se_tinnitus"
-   ]
+   ],
+   "arrivalSeconds": 42.691
   },
   {
    "path": "assets/bg/room2.jpg",
    "bytes": 45488,
    "names": [
     "bg_room2"
-   ]
+   ],
+   "arrivalSeconds": 42.994
   },
   {
    "path": "assets/bg/oshiire_in.jpg",
    "bytes": 31016,
    "names": [
     "bg_oshiire_in"
-   ]
+   ],
+   "arrivalSeconds": 43.224
   },
   {
    "path": "assets/bg/room2_blood.jpg",
    "bytes": 52250,
    "names": [
     "bg_room2_blood"
-   ]
+   ],
+   "arrivalSeconds": 43.56
   },
   {
    "path": "assets/sfx/se_kaan.wav",
-   "bytes": 65040,
+   "bytes": 65028,
    "names": [
     "se_kaan"
-   ]
+   ],
+   "arrivalSeconds": 43.96
   },
   {
    "path": "assets/sfx/se_breath.wav",
-   "bytes": 40435,
+   "bytes": 40423,
    "names": [
     "se_breath"
-   ]
+   ],
+   "arrivalSeconds": 44.237
   },
   {
    "path": "assets/sfx/se_slash.wav",
-   "bytes": 4793,
+   "bytes": 4781,
    "names": [
     "se_slash"
-   ]
+   ],
+   "arrivalSeconds": 44.336
   },
   {
    "path": "assets/sfx/se_karan.wav",
-   "bytes": 14532,
+   "bytes": 14520,
    "names": [
     "se_karan"
-   ]
+   ],
+   "arrivalSeconds": 44.484
   },
   {
    "path": "assets/sfx/se_door_close.wav",
-   "bytes": 4323,
+   "bytes": 4311,
    "names": [
     "se_door_close"
-   ]
+   ],
+   "arrivalSeconds": 44.58
   },
   {
    "path": "assets/sfx/se_vibrate.wav",
-   "bytes": 6556,
+   "bytes": 6544,
    "names": [
     "se_vibrate"
-   ]
+   ],
+   "arrivalSeconds": 44.688
   },
   {
    "path": "assets/bg/kaii_gap.png",
-   "bytes": 170922,
+   "bytes": 23132,
    "names": [
     "kaii_gap"
-   ]
+   ],
+   "arrivalSeconds": 44.879
   },
   {
    "path": "assets/sfx/se_noise.wav",
-   "bytes": 9023,
+   "bytes": 9011,
    "names": [
     "se_noise"
-   ]
+   ],
+   "arrivalSeconds": 44.999
   },
   {
    "path": "assets/bg/floor_drop.jpg",
    "bytes": 68296,
    "names": [
     "bg_floor_drop"
-   ]
+   ],
+   "arrivalSeconds": 45.415
   },
   {
    "path": "assets/sfx/se_drag.wav",
-   "bytes": 25976,
+   "bytes": 25964,
    "names": [
     "se_drag"
-   ]
+   ],
+   "arrivalSeconds": 45.62
   },
   {
    "path": "assets/sfx/se_glass.wav",
-   "bytes": 13952,
+   "bytes": 13940,
    "names": [
     "se_glass"
-   ]
+   ],
+   "arrivalSeconds": 45.765
   },
   {
    "path": "assets/bg/yard_up.jpg",
    "bytes": 71212,
    "names": [
     "bg_yard_up"
-   ]
+   ],
+   "arrivalSeconds": 46.196
   },
   {
    "path": "assets/sfx/se_breath_pass.wav",
-   "bytes": 30911,
+   "bytes": 30899,
    "names": [
     "se_breath_pass"
-   ]
+   ],
+   "arrivalSeconds": 46.425
   },
   {
    "path": "assets/sfx/se_nucha.wav",
-   "bytes": 4482,
+   "bytes": 4470,
    "names": [
     "se_nucha"
-   ]
+   ],
+   "arrivalSeconds": 46.523
   },
   {
    "path": "assets/bg/oshiire_eye.jpg",
    "bytes": 35256,
    "names": [
     "bg_oshiire_eye"
-   ]
+   ],
+   "arrivalSeconds": 46.774
   },
   {
    "path": "assets/sfx/se_gan.wav",
-   "bytes": 25192,
+   "bytes": 25180,
    "names": [
     "se_gan"
-   ]
+   ],
+   "arrivalSeconds": 46.975
   },
   {
    "path": "assets/sfx/se_kiii.wav",
-   "bytes": 10346,
+   "bytes": 10334,
    "names": [
     "se_kiii"
-   ]
+   ],
+   "arrivalSeconds": 47.101
   },
   {
    "path": "assets/sfx/se_guju.wav",
-   "bytes": 4777,
+   "bytes": 4765,
    "names": [
     "se_guju"
-   ]
+   ],
+   "arrivalSeconds": 47.2
   },
   {
    "path": "assets/bg/hall_door.jpg",
    "bytes": 51884,
    "names": [
     "bg_hall_door"
-   ]
+   ],
+   "arrivalSeconds": 47.535
   },
   {
    "path": "assets/sfx/se_knee.wav",
-   "bytes": 5252,
+   "bytes": 5240,
    "names": [
     "se_knee"
-   ]
+   ],
+   "arrivalSeconds": 47.636
   },
   {
    "path": "assets/sfx/se_siren.wav",
-   "bytes": 131005,
+   "bytes": 130993,
    "names": [
     "se_siren"
-   ]
+   ],
+   "arrivalSeconds": 48.366
   },
   {
    "path": "assets/sfx/se_siren_loop.wav",
-   "bytes": 43156,
+   "bytes": 43144,
    "names": [
     "se_siren_loop"
-   ]
+   ],
+   "arrivalSeconds": 48.657
   },
   {
    "path": "assets/sfx/se_scream.wav",
-   "bytes": 15809,
+   "bytes": 15797,
    "names": [
     "se_scream"
-   ]
+   ],
+   "arrivalSeconds": 48.811
   },
   {
    "path": "assets/cast/endcard_on.png",
-   "bytes": 79150,
+   "bytes": 51340,
    "names": [
     "cast_endcard_on"
-   ]
+   ],
+   "arrivalSeconds": 49.142
   }
  ],
  "splash": {
@@ -1252,13 +1358,27 @@
    "width": 540,
    "minHeight": 960,
    "maxHeight": 1296
+  },
+  "afterTap": {
+   "mode": "engine",
+   "minSeconds": 1.2,
+   "maxSeconds": 3
   }
  },
  "wasmBrotli": "classes.wasm.br",
  "boot": {
-  "assets": 1644979,
-  "assetsWire": 1239027,
-  "wasm": 1685641,
-  "wasmWire": 1753912
+  "assets": 1645330,
+  "assetsWire": 1239143,
+  "wasm": 1704928,
+  "wasmWire": 1773199
+ },
+ "serviceWorker": true,
+ "startupBudget": {
+  "seconds": 17,
+  "why": "4G で 16.9 秒。起動に要るのは wasm（1.7 MB）とタイトルの写真・環境音・字のアトラスで、残りの候補（タイトルで押した時の音と門の前の効果音・約 0.7 秒分）は押した直後に鳴るので後回しにしていない。後回しにしても 16.2 秒で 16 秒に収まらないので、起動の素材を詰めるまでの仮の予算"
+ },
+ "checks": {
+  "title4g": "ok",
+  "tapNoRecord": true
  }
 }
